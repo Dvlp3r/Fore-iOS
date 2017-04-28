@@ -1,0 +1,596 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5D271DBC1EB144E800186D15 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D271DBB1EB144E800186D15 /* main.m */; };
+		5D271DC51EB144E800186D15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D271DC31EB144E800186D15 /* Main.storyboard */; };
+		5D271DC71EB144E800186D15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D271DC61EB144E800186D15 /* Assets.xcassets */; };
+		5D271DCA1EB144E800186D15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D271DC81EB144E800186D15 /* LaunchScreen.storyboard */; };
+		5D7B1AE61EB2897B00FD9DEA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D7B1AD21EB2897B00FD9DEA /* AppDelegate.m */; };
+		5D7B1AE71EB2897B00FD9DEA /* LayoutManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D7B1AD51EB2897B00FD9DEA /* LayoutManager.m */; };
+		5D7B1AE81EB2897B00FD9DEA /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D7B1ADD1EB2897B00FD9DEA /* LoginViewController.m */; };
+		5D7B1AE91EB2897B00FD9DEA /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D7B1AE31EB2897B00FD9DEA /* SignUpViewController.m */; };
+		5D7B1AED1EB28C5100FD9DEA /* SignUpDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D7B1AEC1EB28C5100FD9DEA /* SignUpDelegate.m */; };
+		5D7B1AF01EB28C9300FD9DEA /* FOBaseService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D7B1AEF1EB28C9300FD9DEA /* FOBaseService.m */; };
+		5D7B1AF31EB28CCA00FD9DEA /* FOFacebookService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D7B1AF21EB28CCA00FD9DEA /* FOFacebookService.m */; };
+		5DA32D401EB2A0A100A516B6 /* FOAccountService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA32D3F1EB2A0A100A516B6 /* FOAccountService.m */; };
+		5DA32D431EB2BB8400A516B6 /* ExploreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA32D421EB2BB8400A516B6 /* ExploreViewController.m */; };
+		5DA32D461EB2BB9300A516B6 /* SavedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA32D451EB2BB9300A516B6 /* SavedViewController.m */; };
+		8FA64777813CDECB0D4A3B0E /* Pods_Fore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84AEB29DA7207E241503DE72 /* Pods_Fore.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5D271DB71EB144E800186D15 /* Fore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fore.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D271DBB1EB144E800186D15 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5D271DC41EB144E800186D15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5D271DC61EB144E800186D15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5D271DC91EB144E800186D15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5D271DCB1EB144E800186D15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D6D98C01EB1978200D0F8E3 /* Fore_PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Fore_PrefixHeader.pch; sourceTree = "<group>"; };
+		5D7B1AD11EB2897B00FD9DEA /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5D7B1AD21EB2897B00FD9DEA /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5D7B1AD41EB2897B00FD9DEA /* LayoutManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayoutManager.h; sourceTree = "<group>"; };
+		5D7B1AD51EB2897B00FD9DEA /* LayoutManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayoutManager.m; sourceTree = "<group>"; };
+		5D7B1ADC1EB2897B00FD9DEA /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		5D7B1ADD1EB2897B00FD9DEA /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		5D7B1AE21EB2897B00FD9DEA /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		5D7B1AE31EB2897B00FD9DEA /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		5D7B1AEB1EB28C5100FD9DEA /* SignUpDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpDelegate.h; sourceTree = "<group>"; };
+		5D7B1AEC1EB28C5100FD9DEA /* SignUpDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpDelegate.m; sourceTree = "<group>"; };
+		5D7B1AEE1EB28C9300FD9DEA /* FOBaseService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FOBaseService.h; sourceTree = "<group>"; };
+		5D7B1AEF1EB28C9300FD9DEA /* FOBaseService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FOBaseService.m; sourceTree = "<group>"; };
+		5D7B1AF11EB28CCA00FD9DEA /* FOFacebookService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FOFacebookService.h; sourceTree = "<group>"; };
+		5D7B1AF21EB28CCA00FD9DEA /* FOFacebookService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FOFacebookService.m; sourceTree = "<group>"; };
+		5DA32D3D1EB29CFA00A516B6 /* FOFacebookLoginDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FOFacebookLoginDelegate.h; sourceTree = "<group>"; };
+		5DA32D3E1EB2A0A100A516B6 /* FOAccountService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FOAccountService.h; sourceTree = "<group>"; };
+		5DA32D3F1EB2A0A100A516B6 /* FOAccountService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FOAccountService.m; sourceTree = "<group>"; };
+		5DA32D411EB2BB8400A516B6 /* ExploreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExploreViewController.h; sourceTree = "<group>"; };
+		5DA32D421EB2BB8400A516B6 /* ExploreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExploreViewController.m; sourceTree = "<group>"; };
+		5DA32D441EB2BB9300A516B6 /* SavedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SavedViewController.h; sourceTree = "<group>"; };
+		5DA32D451EB2BB9300A516B6 /* SavedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SavedViewController.m; sourceTree = "<group>"; };
+		84AEB29DA7207E241503DE72 /* Pods_Fore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5AB7FAB8494685F1EE6A798 /* Pods-Fore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fore.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Fore/Pods-Fore.debug.xcconfig"; sourceTree = "<group>"; };
+		B1E188FA1FFACB3270128B47 /* Pods-Fore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fore.release.xcconfig"; path = "Pods/Target Support Files/Pods-Fore/Pods-Fore.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5D271DB41EB144E800186D15 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FA64777813CDECB0D4A3B0E /* Pods_Fore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3FD82B9E0C1824A5AF2AE9A2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A5AB7FAB8494685F1EE6A798 /* Pods-Fore.debug.xcconfig */,
+				B1E188FA1FFACB3270128B47 /* Pods-Fore.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5245AF4F15631236FF3189AB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				84AEB29DA7207E241503DE72 /* Pods_Fore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5D271DAE1EB144E800186D15 = {
+			isa = PBXGroup;
+			children = (
+				5D271DB91EB144E800186D15 /* Fore */,
+				5D271DB81EB144E800186D15 /* Products */,
+				3FD82B9E0C1824A5AF2AE9A2 /* Pods */,
+				5245AF4F15631236FF3189AB /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5D271DB81EB144E800186D15 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5D271DB71EB144E800186D15 /* Fore.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5D271DB91EB144E800186D15 /* Fore */ = {
+			isa = PBXGroup;
+			children = (
+				5D7B1AD01EB2897B00FD9DEA /* Application */,
+				5D7B1AD31EB2897B00FD9DEA /* Components */,
+				5D7B1AD61EB2897B00FD9DEA /* Models */,
+				5D7B1AD71EB2897B00FD9DEA /* Requests */,
+				5D7B1AD81EB2897B00FD9DEA /* Resources */,
+				5D7B1AD91EB2897B00FD9DEA /* Screens */,
+				5D7B1AE51EB2897B00FD9DEA /* Services */,
+				5D271DC31EB144E800186D15 /* Main.storyboard */,
+				5D271DC61EB144E800186D15 /* Assets.xcassets */,
+				5D271DC81EB144E800186D15 /* LaunchScreen.storyboard */,
+				5D271DCB1EB144E800186D15 /* Info.plist */,
+				5D271DBA1EB144E800186D15 /* Supporting Files */,
+			);
+			path = Fore;
+			sourceTree = "<group>";
+		};
+		5D271DBA1EB144E800186D15 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5D271DBB1EB144E800186D15 /* main.m */,
+				5D6D98C01EB1978200D0F8E3 /* Fore_PrefixHeader.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5D7B1AD01EB2897B00FD9DEA /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				5D7B1AD11EB2897B00FD9DEA /* AppDelegate.h */,
+				5D7B1AD21EB2897B00FD9DEA /* AppDelegate.m */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		5D7B1AD31EB2897B00FD9DEA /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				5D7B1AD41EB2897B00FD9DEA /* LayoutManager.h */,
+				5D7B1AD51EB2897B00FD9DEA /* LayoutManager.m */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		5D7B1AD61EB2897B00FD9DEA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5D7B1AD71EB2897B00FD9DEA /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		5D7B1AD81EB2897B00FD9DEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5D7B1AD91EB2897B00FD9DEA /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				5D7B1ADA1EB2897B00FD9DEA /* Login */,
+				5D7B1ADF1EB2897B00FD9DEA /* Onboarding */,
+				5D7B1AE01EB2897B00FD9DEA /* SignUp */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		5D7B1ADA1EB2897B00FD9DEA /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				5D7B1ADB1EB2897B00FD9DEA /* Controller */,
+				5D7B1ADE1EB2897B00FD9DEA /* View */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		5D7B1ADB1EB2897B00FD9DEA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5D7B1ADC1EB2897B00FD9DEA /* LoginViewController.h */,
+				5D7B1ADD1EB2897B00FD9DEA /* LoginViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5D7B1ADE1EB2897B00FD9DEA /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5D7B1ADF1EB2897B00FD9DEA /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				5DA32D411EB2BB8400A516B6 /* ExploreViewController.h */,
+				5DA32D421EB2BB8400A516B6 /* ExploreViewController.m */,
+				5DA32D441EB2BB9300A516B6 /* SavedViewController.h */,
+				5DA32D451EB2BB9300A516B6 /* SavedViewController.m */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		5D7B1AE01EB2897B00FD9DEA /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				5D7B1AEA1EB28C1C00FD9DEA /* Delegate */,
+				5D7B1AE11EB2897B00FD9DEA /* Controller */,
+				5D7B1AE41EB2897B00FD9DEA /* View */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		5D7B1AE11EB2897B00FD9DEA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5D7B1AE21EB2897B00FD9DEA /* SignUpViewController.h */,
+				5D7B1AE31EB2897B00FD9DEA /* SignUpViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5D7B1AE41EB2897B00FD9DEA /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5D7B1AE51EB2897B00FD9DEA /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				5DA32D3C1EB29CD500A516B6 /* Protocols */,
+				5D7B1AEE1EB28C9300FD9DEA /* FOBaseService.h */,
+				5D7B1AEF1EB28C9300FD9DEA /* FOBaseService.m */,
+				5D7B1AF11EB28CCA00FD9DEA /* FOFacebookService.h */,
+				5D7B1AF21EB28CCA00FD9DEA /* FOFacebookService.m */,
+				5DA32D3E1EB2A0A100A516B6 /* FOAccountService.h */,
+				5DA32D3F1EB2A0A100A516B6 /* FOAccountService.m */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		5D7B1AEA1EB28C1C00FD9DEA /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				5D7B1AEB1EB28C5100FD9DEA /* SignUpDelegate.h */,
+				5D7B1AEC1EB28C5100FD9DEA /* SignUpDelegate.m */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		5DA32D3C1EB29CD500A516B6 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				5DA32D3D1EB29CFA00A516B6 /* FOFacebookLoginDelegate.h */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5D271DB61EB144E800186D15 /* Fore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5D271DCE1EB144E800186D15 /* Build configuration list for PBXNativeTarget "Fore" */;
+			buildPhases = (
+				FEE5DAA301B76E0A019BCC29 /* [CP] Check Pods Manifest.lock */,
+				5D271DB31EB144E800186D15 /* Sources */,
+				5D271DB41EB144E800186D15 /* Frameworks */,
+				5D271DB51EB144E800186D15 /* Resources */,
+				BC39D6C31EBE0C3B520AB475 /* [CP] Embed Pods Frameworks */,
+				5B9E25934C58810C9E23CCB4 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Fore;
+			productName = Fore;
+			productReference = 5D271DB71EB144E800186D15 /* Fore.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5D271DAF1EB144E800186D15 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = Dvlper;
+				TargetAttributes = {
+					5D271DB61EB144E800186D15 = {
+						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = RD3D64KZ4A;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 5D271DB21EB144E800186D15 /* Build configuration list for PBXProject "Fore" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5D271DAE1EB144E800186D15;
+			productRefGroup = 5D271DB81EB144E800186D15 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5D271DB61EB144E800186D15 /* Fore */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5D271DB51EB144E800186D15 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D271DCA1EB144E800186D15 /* LaunchScreen.storyboard in Resources */,
+				5D271DC71EB144E800186D15 /* Assets.xcassets in Resources */,
+				5D271DC51EB144E800186D15 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5B9E25934C58810C9E23CCB4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Fore/Pods-Fore-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC39D6C31EBE0C3B520AB475 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Fore/Pods-Fore-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FEE5DAA301B76E0A019BCC29 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5D271DB31EB144E800186D15 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DA32D431EB2BB8400A516B6 /* ExploreViewController.m in Sources */,
+				5D7B1AF01EB28C9300FD9DEA /* FOBaseService.m in Sources */,
+				5D7B1AE91EB2897B00FD9DEA /* SignUpViewController.m in Sources */,
+				5D271DBC1EB144E800186D15 /* main.m in Sources */,
+				5D7B1AED1EB28C5100FD9DEA /* SignUpDelegate.m in Sources */,
+				5DA32D461EB2BB9300A516B6 /* SavedViewController.m in Sources */,
+				5D7B1AE61EB2897B00FD9DEA /* AppDelegate.m in Sources */,
+				5D7B1AE71EB2897B00FD9DEA /* LayoutManager.m in Sources */,
+				5DA32D401EB2A0A100A516B6 /* FOAccountService.m in Sources */,
+				5D7B1AF31EB28CCA00FD9DEA /* FOFacebookService.m in Sources */,
+				5D7B1AE81EB2897B00FD9DEA /* LoginViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5D271DC31EB144E800186D15 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5D271DC41EB144E800186D15 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5D271DC81EB144E800186D15 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5D271DC91EB144E800186D15 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5D271DCC1EB144E800186D15 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5D271DCD1EB144E800186D15 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5D271DCF1EB144E800186D15 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5AB7FAB8494685F1EE6A798 /* Pods-Fore.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = RD3D64KZ4A;
+				GCC_PREFIX_HEADER = Fore/Fore_PrefixHeader.pch;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleAnalytics\"",
+					"\"${PODS_ROOT}/Headers/Public/Facebook-iOS-SDK\\\" \"${PODS_ROOT}/Headers/Public/FBSDKCoreKit/FBSDKCoreKit\\\"\n",
+					"\"${PODS_ROOT}/Headers/Public/FBSDKCoreKit\\\"\n \"${PODS_ROOT}/Headers/Public/Facebook-iOS-SDK/FacebookSDK\\\"\n",
+				);
+				INFOPLIST_FILE = Fore/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Dvlper.Fore;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		5D271DD01EB144E800186D15 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1E188FA1FFACB3270128B47 /* Pods-Fore.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = RD3D64KZ4A;
+				GCC_PREFIX_HEADER = Fore/Fore_PrefixHeader.pch;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/GoogleAnalytics\"",
+					"\"${PODS_ROOT}/Headers/Public/Facebook-iOS-SDK\\\" \"${PODS_ROOT}/Headers/Public/FBSDKCoreKit/FBSDKCoreKit\\\"\n",
+					"\"${PODS_ROOT}/Headers/Public/FBSDKCoreKit\\\"\n \"${PODS_ROOT}/Headers/Public/Facebook-iOS-SDK/FacebookSDK\\\"\n",
+				);
+				INFOPLIST_FILE = Fore/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Dvlper.Fore;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5D271DB21EB144E800186D15 /* Build configuration list for PBXProject "Fore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D271DCC1EB144E800186D15 /* Debug */,
+				5D271DCD1EB144E800186D15 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5D271DCE1EB144E800186D15 /* Build configuration list for PBXNativeTarget "Fore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D271DCF1EB144E800186D15 /* Debug */,
+				5D271DD01EB144E800186D15 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5D271DAF1EB144E800186D15 /* Project object */;
+}
