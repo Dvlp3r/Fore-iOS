@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-//#import "CoreData+MagicalRecord.h"
+#import "MagicalRecord.h"
 
 @interface AppDelegate ()
 
@@ -50,15 +50,6 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
-
-//- (BOOL)application:(UIApplication *)application
-//didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-//    
-//    [[FBSDKApplicationDelegate sharedInstance] application:application
-//                             didFinishLaunchingWithOptions:launchOptions];
-//    // Add any custom logic here.
-//    return YES;
-//}
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
   sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {

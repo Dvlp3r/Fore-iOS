@@ -15,6 +15,8 @@ typedef void(^FacebookSessionCallback)();
 
 @interface FOFacebookService : FOBaseService
 
++(id)sharedInstance;
+
 @property (nonatomic,strong) NSArray *readPermissions;
 @property (nonatomic,strong) NSArray *publishPermissions;
 

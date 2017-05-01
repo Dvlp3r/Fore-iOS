@@ -10,6 +10,7 @@
 #import "FOFacebookService.h"
 #import "Bolts.h"
 #import "FBSDKCoreKit.h"
+#import <CoreData/CoreData.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

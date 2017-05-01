@@ -54,7 +54,19 @@
     _passwordTextField.textField.delegate = self;
     
     _loginButton.layer.masksToBounds = YES;
-    _loginButton.layer.cornerRadius = 22;
+    if (IS_IPHONE_6P) {
+        _loginButton.layer.cornerRadius = 22;
+    }
+    else if (IS_IPHONE_6)
+    {
+        _loginButton.layer.cornerRadius = 22;
+    }
+    else if (IS_IPHONE_5){
+        _loginButton.layer.cornerRadius = 18;
+    }
+    else if (IS_IPHONE_4_OR_LESS){
+        _loginButton.layer.cornerRadius = 14;
+    }
     
     [self addConstraints];
 }
@@ -97,8 +109,8 @@
     
     [[self createAnAccountButton] mas_makeConstraints:^(MASConstraintMaker *make) {
         make.bottom.equalTo(self.view.mas_bottom).with.offset(-[self.layoutManager height:5]);
-        make.centerX.equalTo(self.view.mas_centerX);
-        make.width.equalTo(@([self.layoutManager width:30]));
+        make.left.equalTo(self.view.mas_left).with.offset([self.layoutManager width:10]);
+        make.right.equalTo(self.view.mas_right).with.offset(-[self.layoutManager width:10]);
         make.height.equalTo(@([self.layoutManager height:3.5]));
     }];
     
@@ -134,7 +146,7 @@
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField;
 {
-    textField.resignFirstResponder;
+//    textField.resignFirstResponder;
     return YES;
 }
 

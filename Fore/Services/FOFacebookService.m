@@ -9,7 +9,20 @@
 #import "FOFacebookService.h"
 #import <AsyncImageDownloader/AsyncImageDownloader.h>
 
+static FOFacebookService *sharedInstance = nil;
+
 @implementation FOFacebookService
+
++(id)sharedInstance;
+{
+    static FOFacebookService *sharedInstance = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedInstance = [[FOFacebookService alloc] init];
+        // Do any other initialisation stuff here
+    });
+    return sharedInstance;
+}
 
 -(NSArray*)allPermissions;
 {

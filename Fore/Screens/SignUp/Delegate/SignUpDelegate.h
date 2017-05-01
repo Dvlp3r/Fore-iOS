@@ -16,6 +16,8 @@
 
 @property (nonatomic, strong) FOFacebookService *facebookService;
 
++(id)sharedInstance;
+
 -(void)signUp:(UIViewController *)controller;
 
 @end

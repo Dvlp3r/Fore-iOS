@@ -28,7 +28,7 @@
     [super viewDidLoad];
     
     self.layoutManager = [[LayoutManager alloc] init];
-    self.signUpDelegate = [[SignUpDelegate alloc] init];//need to do shared instance here
+    self.signUpDelegate = [SignUpDelegate sharedInstance];
 
     /*
      @property (nonatomic) CGFloat idlePlaceHolderFontSize;
@@ -63,7 +63,19 @@
     _passwordTextField.textField.delegate = self;
     
     _signUpButton.layer.masksToBounds = YES;
-    _signUpButton.layer.cornerRadius = 22;
+    if (IS_IPHONE_6P) {
+        _signUpButton.layer.cornerRadius = 22;
+    }
+    else if (IS_IPHONE_6)
+    {
+        _signUpButton.layer.cornerRadius = 22;
+    }
+    else if (IS_IPHONE_5){
+        _signUpButton.layer.cornerRadius = 18;
+    }
+    else if (IS_IPHONE_4_OR_LESS){
+        _signUpButton.layer.cornerRadius = 14;
+    }
     
     [self addConstraints];
 }
