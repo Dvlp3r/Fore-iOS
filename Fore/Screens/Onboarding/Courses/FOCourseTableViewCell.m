@@ -32,32 +32,19 @@
     return self;
 }
 
+-(id)initWithCoder:(NSCoder *)aDecoder {
+    if ( !(self = [super initWithCoder:aDecoder]) ) return nil;
+    
+    // Your code goes here!
+    [self addViews];
+    return self;
+}
+
 -(void)prepareForReuse;
 {
     [super prepareForReuse];
     
-//    [self setMediaType:OUChallengeMediaTypeNone];
-//    [[self mediaComponent] prepareForReuse];
-//    //    [[self infoComponent] prepareForReuse];
-//    //    [[self descriptionComponent] prepareForReuse];
-//    
-//    [self setVideoProgressBlock:nil];
-//    [self setVideoCompletionBlock:nil];
-//    [[self progressView] setProgress:0];
-//    [[self progressView] setHidden:NO];
-//    [self setHasVideoURL:NO];
-//    
-//    [self showSeparator:YES];
-    
-    
 }
-
-//-(void)prepareForReuse;
-//{
-//    [[self courseImageView] setImage:nil];
-//    
-//}
-
 
 #pragma mark view building
 
@@ -80,10 +67,10 @@
     [[self courseImageView] setFrame:CGRectMake(0,
                                                0,
                                                CGRectGetWidth(screenFrame),
-                                               CGRectGetWidth(screenFrame))];
+                                               CGRectGetHeight(screenFrame)/3)];
     
     [[self nameOfCourseLabel] setFrame:CGRectMake(0,
-                                              CGRectGetMaxY([[self courseImageView] frame])+15,
+                                              CGRectGetMaxY([[self courseImageView] frame])+5,
                                               CGRectGetWidth([self frame])/2,
                                               10)];
     
@@ -150,8 +137,8 @@
     }
     
     _courseImageView = [UIImageView new];
-    [[_courseImageView layer] setBorderColor:[UIColor redColor].CGColor];
-    [[_courseImageView layer] setBorderWidth:1];
+//    [[_courseImageView layer] setBorderColor:[UIColor redColor].CGColor];
+//    [[_courseImageView layer] setBorderWidth:1];
     [_courseImageView setImage:[UIImage imageNamed:@"icon_time_display"]];
     [_courseImageView sizeToFit];
     
@@ -161,8 +148,8 @@
 -(UILabel*)newLabel;
 {
     UILabel *label = [UILabel new];
-    [[label layer] setBorderColor:[UIColor redColor].CGColor];
-    [[label layer] setBorderWidth:1];
+//    [[label layer] setBorderColor:[UIColor redColor].CGColor];
+//    [[label layer] setBorderWidth:1];
     [label setFont:[UIFont systemFontOfSize:10]];
     [label setTextColor:[UIColor lightGrayColor]];
     [label setTextAlignment:NSTextAlignmentLeft];
