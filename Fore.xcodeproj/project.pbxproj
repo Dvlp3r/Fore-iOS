@@ -7,13 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D0868BF1EBA677600C71CA1 /* HoleByHoleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0868BE1EBA677600C71CA1 /* HoleByHoleTableViewCell.m */; };
 		5D145A5F1EB3909A00BC9276 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D145A5E1EB3909A00BC9276 /* QuartzCore.framework */; };
 		5D145A611EB390A100BC9276 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D145A601EB390A100BC9276 /* CoreGraphics.framework */; };
+		5D25E8281EB9581100FB45F8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D25E8271EB9581100FB45F8 /* MapKit.framework */; };
+		5D25E82A1EB9658800FB45F8 /* OverViewComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D25E8291EB9658800FB45F8 /* OverViewComponent.m */; };
 		5D271DBC1EB144E800186D15 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D271DBB1EB144E800186D15 /* main.m */; };
 		5D271DC51EB144E800186D15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D271DC31EB144E800186D15 /* Main.storyboard */; };
 		5D271DC71EB144E800186D15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D271DC61EB144E800186D15 /* Assets.xcassets */; };
 		5D271DCA1EB144E800186D15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D271DC81EB144E800186D15 /* LaunchScreen.storyboard */; };
 		5D7630881EB7B4FB006E7C2E /* FOCourseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D7630871EB7B4FB006E7C2E /* FOCourseTableViewCell.m */; };
+		5D7630991EB7D0E9006E7C2E /* FOCourseDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D7630981EB7D0E9006E7C2E /* FOCourseDetailsViewController.m */; };
+		5D7630A61EB7D1AB006E7C2E /* HeaderVideoOverlayComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D76309C1EB7D1AB006E7C2E /* HeaderVideoOverlayComponent.m */; };
+		5D7630A71EB7D1AB006E7C2E /* HoleByHoleComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D76309F1EB7D1AB006E7C2E /* HoleByHoleComponent.m */; };
+		5D7630A91EB7D1AB006E7C2E /* ReviewsComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D7630A51EB7D1AB006E7C2E /* ReviewsComponent.m */; };
+		5D7630AD1EB7D3D6006E7C2E /* CourseInfoComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D7630AC1EB7D3D6006E7C2E /* CourseInfoComponent.m */; };
+		5D7630B01EB7D401006E7C2E /* MapInfoComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D7630AF1EB7D401006E7C2E /* MapInfoComponent.m */; };
+		5D7630B31EB7D411006E7C2E /* WeatherInfoComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D7630B21EB7D411006E7C2E /* WeatherInfoComponent.m */; };
+		5D7630B61EB7D425006E7C2E /* OverviewVideoComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D7630B51EB7D425006E7C2E /* OverviewVideoComponent.m */; };
+		5D7630BC1EB7D5BE006E7C2E /* ParInfoComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D7630BB1EB7D5BE006E7C2E /* ParInfoComponent.m */; };
+		5D7630BF1EB7D5D8006E7C2E /* AmenitiesComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D7630BE1EB7D5D8006E7C2E /* AmenitiesComponent.m */; };
+		5D7630C21EB7D5F6006E7C2E /* CallProShopComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D7630C11EB7D5F6006E7C2E /* CallProShopComponent.m */; };
+		5D7630C81EB7D769006E7C2E /* FOCourseDetailsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D7630C71EB7D769006E7C2E /* FOCourseDetailsView.m */; };
 		5D7B1AE61EB2897B00FD9DEA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D7B1AD21EB2897B00FD9DEA /* AppDelegate.m */; };
 		5D7B1AE71EB2897B00FD9DEA /* LayoutManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D7B1AD51EB2897B00FD9DEA /* LayoutManager.m */; };
 		5D7B1AE81EB2897B00FD9DEA /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D7B1ADD1EB2897B00FD9DEA /* LoginViewController.m */; };
@@ -35,7 +50,6 @@
 		5DAC6B691EB3B52C00FD7467 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DAC6B681EB3B52C00FD7467 /* User.m */; };
 		5DAC6B6D1EB3B53C00FD7467 /* _User.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DAC6B6C1EB3B53C00FD7467 /* _User.m */; };
 		5DFADCBB1EB3CE1800B21870 /* SavedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DFADCB71EB3CE1800B21870 /* SavedViewController.m */; };
-		5DFADCBF1EB3CE4800B21870 /* FOCourseDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DFADCBE1EB3CE4800B21870 /* FOCourseDetailsViewController.m */; };
 		5DFADCC21EB3CE6500B21870 /* FOCoursesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DFADCC11EB3CE6500B21870 /* FOCoursesTableViewController.m */; };
 		5DFADCC61EB3D97C00B21870 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DFADCC51EB3D97C00B21870 /* ProfileViewController.m */; };
 		5DFADCD61EB3F59200B21870 /* FOCourseCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DFADCCF1EB3F59200B21870 /* FOCourseCollectionViewCell.m */; };
@@ -48,8 +62,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5D0868BD1EBA677600C71CA1 /* HoleByHoleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HoleByHoleTableViewCell.h; sourceTree = "<group>"; };
+		5D0868BE1EBA677600C71CA1 /* HoleByHoleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HoleByHoleTableViewCell.m; sourceTree = "<group>"; };
 		5D145A5E1EB3909A00BC9276 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		5D145A601EB390A100BC9276 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5D25E8271EB9581100FB45F8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		5D25E8291EB9658800FB45F8 /* OverViewComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverViewComponent.m; sourceTree = "<group>"; };
 		5D271DB71EB144E800186D15 /* Fore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D271DBB1EB144E800186D15 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5D271DC41EB144E800186D15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -59,6 +77,31 @@
 		5D6D98C01EB1978200D0F8E3 /* Fore_PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Fore_PrefixHeader.pch; sourceTree = "<group>"; };
 		5D7630861EB7B4FB006E7C2E /* FOCourseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FOCourseTableViewCell.h; sourceTree = "<group>"; };
 		5D7630871EB7B4FB006E7C2E /* FOCourseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FOCourseTableViewCell.m; sourceTree = "<group>"; };
+		5D7630971EB7D0E9006E7C2E /* FOCourseDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FOCourseDetailsViewController.h; sourceTree = "<group>"; };
+		5D7630981EB7D0E9006E7C2E /* FOCourseDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FOCourseDetailsViewController.m; sourceTree = "<group>"; };
+		5D76309B1EB7D1AB006E7C2E /* HeaderVideoOverlayComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderVideoOverlayComponent.h; sourceTree = "<group>"; };
+		5D76309C1EB7D1AB006E7C2E /* HeaderVideoOverlayComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderVideoOverlayComponent.m; sourceTree = "<group>"; };
+		5D76309E1EB7D1AB006E7C2E /* HoleByHoleComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HoleByHoleComponent.h; sourceTree = "<group>"; };
+		5D76309F1EB7D1AB006E7C2E /* HoleByHoleComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HoleByHoleComponent.m; sourceTree = "<group>"; };
+		5D7630A11EB7D1AB006E7C2E /* OverViewComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverViewComponent.h; sourceTree = "<group>"; };
+		5D7630A41EB7D1AB006E7C2E /* ReviewsComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewsComponent.h; sourceTree = "<group>"; };
+		5D7630A51EB7D1AB006E7C2E /* ReviewsComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewsComponent.m; sourceTree = "<group>"; };
+		5D7630AB1EB7D3D6006E7C2E /* CourseInfoComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CourseInfoComponent.h; sourceTree = "<group>"; };
+		5D7630AC1EB7D3D6006E7C2E /* CourseInfoComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseInfoComponent.m; sourceTree = "<group>"; };
+		5D7630AE1EB7D401006E7C2E /* MapInfoComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapInfoComponent.h; sourceTree = "<group>"; };
+		5D7630AF1EB7D401006E7C2E /* MapInfoComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapInfoComponent.m; sourceTree = "<group>"; };
+		5D7630B11EB7D411006E7C2E /* WeatherInfoComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherInfoComponent.h; sourceTree = "<group>"; };
+		5D7630B21EB7D411006E7C2E /* WeatherInfoComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherInfoComponent.m; sourceTree = "<group>"; };
+		5D7630B41EB7D425006E7C2E /* OverviewVideoComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverviewVideoComponent.h; sourceTree = "<group>"; };
+		5D7630B51EB7D425006E7C2E /* OverviewVideoComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverviewVideoComponent.m; sourceTree = "<group>"; };
+		5D7630BA1EB7D5BE006E7C2E /* ParInfoComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParInfoComponent.h; sourceTree = "<group>"; };
+		5D7630BB1EB7D5BE006E7C2E /* ParInfoComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParInfoComponent.m; sourceTree = "<group>"; };
+		5D7630BD1EB7D5D8006E7C2E /* AmenitiesComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmenitiesComponent.h; sourceTree = "<group>"; };
+		5D7630BE1EB7D5D8006E7C2E /* AmenitiesComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AmenitiesComponent.m; sourceTree = "<group>"; };
+		5D7630C01EB7D5F6006E7C2E /* CallProShopComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CallProShopComponent.h; sourceTree = "<group>"; };
+		5D7630C11EB7D5F6006E7C2E /* CallProShopComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CallProShopComponent.m; sourceTree = "<group>"; };
+		5D7630C61EB7D769006E7C2E /* FOCourseDetailsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FOCourseDetailsView.h; sourceTree = "<group>"; };
+		5D7630C71EB7D769006E7C2E /* FOCourseDetailsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FOCourseDetailsView.m; sourceTree = "<group>"; };
 		5D7B1AD11EB2897B00FD9DEA /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5D7B1AD21EB2897B00FD9DEA /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		5D7B1AD41EB2897B00FD9DEA /* LayoutManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayoutManager.h; sourceTree = "<group>"; };
@@ -100,8 +143,6 @@
 		5DD06EEC1EB2D4AF00FFB70E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		5DFADCB61EB3CE1800B21870 /* SavedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SavedViewController.h; sourceTree = "<group>"; };
 		5DFADCB71EB3CE1800B21870 /* SavedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SavedViewController.m; sourceTree = "<group>"; };
-		5DFADCBD1EB3CE4800B21870 /* FOCourseDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FOCourseDetailsViewController.h; sourceTree = "<group>"; };
-		5DFADCBE1EB3CE4800B21870 /* FOCourseDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FOCourseDetailsViewController.m; sourceTree = "<group>"; };
 		5DFADCC01EB3CE6500B21870 /* FOCoursesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FOCoursesTableViewController.h; sourceTree = "<group>"; };
 		5DFADCC11EB3CE6500B21870 /* FOCoursesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FOCoursesTableViewController.m; sourceTree = "<group>"; };
 		5DFADCC41EB3D97C00B21870 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
@@ -128,6 +169,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D25E8281EB9581100FB45F8 /* MapKit.framework in Frameworks */,
 				5D145A611EB390A100BC9276 /* CoreGraphics.framework in Frameworks */,
 				5D145A5F1EB3909A00BC9276 /* QuartzCore.framework in Frameworks */,
 				5DABBB8F1EB2F9210067F0DD /* CoreData.framework in Frameworks */,
@@ -152,6 +194,7 @@
 		5245AF4F15631236FF3189AB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5D25E8271EB9581100FB45F8 /* MapKit.framework */,
 				5D145A601EB390A100BC9276 /* CoreGraphics.framework */,
 				5D145A5E1EB3909A00BC9276 /* QuartzCore.framework */,
 				5D8BAB911EB2F4AE0004E2EF /* UIKit.framework */,
@@ -207,6 +250,88 @@
 				5D6D98C01EB1978200D0F8E3 /* Fore_PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5D7630891EB7CFCB006E7C2E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5D7630971EB7D0E9006E7C2E /* FOCourseDetailsViewController.h */,
+				5D7630981EB7D0E9006E7C2E /* FOCourseDetailsViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5D76308A1EB7CFCB006E7C2E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5D7630C61EB7D769006E7C2E /* FOCourseDetailsView.h */,
+				5D7630C71EB7D769006E7C2E /* FOCourseDetailsView.m */,
+				5D7630A01EB7D1AB006E7C2E /* Overview */,
+				5D76309A1EB7D1AB006E7C2E /* Header */,
+				5D76309D1EB7D1AB006E7C2E /* HoleByHoleInfo */,
+				5D7630A31EB7D1AB006E7C2E /* Reviews */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5D76309A1EB7D1AB006E7C2E /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				5D76309B1EB7D1AB006E7C2E /* HeaderVideoOverlayComponent.h */,
+				5D76309C1EB7D1AB006E7C2E /* HeaderVideoOverlayComponent.m */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		5D76309D1EB7D1AB006E7C2E /* HoleByHoleInfo */ = {
+			isa = PBXGroup;
+			children = (
+				5D76309E1EB7D1AB006E7C2E /* HoleByHoleComponent.h */,
+				5D76309F1EB7D1AB006E7C2E /* HoleByHoleComponent.m */,
+				5D0868BD1EBA677600C71CA1 /* HoleByHoleTableViewCell.h */,
+				5D0868BE1EBA677600C71CA1 /* HoleByHoleTableViewCell.m */,
+			);
+			path = HoleByHoleInfo;
+			sourceTree = "<group>";
+		};
+		5D7630A01EB7D1AB006E7C2E /* Overview */ = {
+			isa = PBXGroup;
+			children = (
+				5D7630A11EB7D1AB006E7C2E /* OverViewComponent.h */,
+				5D25E8291EB9658800FB45F8 /* OverViewComponent.m */,
+				5D7630AA1EB7D3C4006E7C2E /* SubComponents */,
+			);
+			path = Overview;
+			sourceTree = "<group>";
+		};
+		5D7630A31EB7D1AB006E7C2E /* Reviews */ = {
+			isa = PBXGroup;
+			children = (
+				5D7630A41EB7D1AB006E7C2E /* ReviewsComponent.h */,
+				5D7630A51EB7D1AB006E7C2E /* ReviewsComponent.m */,
+			);
+			path = Reviews;
+			sourceTree = "<group>";
+		};
+		5D7630AA1EB7D3C4006E7C2E /* SubComponents */ = {
+			isa = PBXGroup;
+			children = (
+				5D7630BA1EB7D5BE006E7C2E /* ParInfoComponent.h */,
+				5D7630BB1EB7D5BE006E7C2E /* ParInfoComponent.m */,
+				5D7630AB1EB7D3D6006E7C2E /* CourseInfoComponent.h */,
+				5D7630AC1EB7D3D6006E7C2E /* CourseInfoComponent.m */,
+				5D7630BD1EB7D5D8006E7C2E /* AmenitiesComponent.h */,
+				5D7630BE1EB7D5D8006E7C2E /* AmenitiesComponent.m */,
+				5D7630AE1EB7D401006E7C2E /* MapInfoComponent.h */,
+				5D7630AF1EB7D401006E7C2E /* MapInfoComponent.m */,
+				5D7630B11EB7D411006E7C2E /* WeatherInfoComponent.h */,
+				5D7630B21EB7D411006E7C2E /* WeatherInfoComponent.m */,
+				5D7630B41EB7D425006E7C2E /* OverviewVideoComponent.h */,
+				5D7630B51EB7D425006E7C2E /* OverviewVideoComponent.m */,
+				5D7630C01EB7D5F6006E7C2E /* CallProShopComponent.h */,
+				5D7630C11EB7D5F6006E7C2E /* CallProShopComponent.m */,
+			);
+			path = SubComponents;
 			sourceTree = "<group>";
 		};
 		5D7B1AD01EB2897B00FD9DEA /* Application */ = {
@@ -421,8 +546,8 @@
 		5DFADCB31EB3CE1800B21870 /* Course Details */ = {
 			isa = PBXGroup;
 			children = (
-				5DFADCBD1EB3CE4800B21870 /* FOCourseDetailsViewController.h */,
-				5DFADCBE1EB3CE4800B21870 /* FOCourseDetailsViewController.m */,
+				5D7630891EB7CFCB006E7C2E /* Controller */,
+				5D76308A1EB7CFCB006E7C2E /* View */,
 			);
 			path = "Course Details";
 			sourceTree = "<group>";
@@ -625,6 +750,8 @@
 			files = (
 				5DFADCDB1EB3F5AC00B21870 /* ExploreView.m in Sources */,
 				5D7630881EB7B4FB006E7C2E /* FOCourseTableViewCell.m in Sources */,
+				5D25E82A1EB9658800FB45F8 /* OverViewComponent.m in Sources */,
+				5D7630C81EB7D769006E7C2E /* FOCourseDetailsView.m in Sources */,
 				5DFADCD81EB3F59200B21870 /* ExploreViewController.m in Sources */,
 				5DFADCDE1EB411AC00B21870 /* StatesCollectionView.m in Sources */,
 				5DAC6B6D1EB3B53C00FD7467 /* _User.m in Sources */,
@@ -633,22 +760,33 @@
 				5DFADCD71EB3F59200B21870 /* FOStateCollectionViewCell.m in Sources */,
 				5D7B1AE91EB2897B00FD9DEA /* SignUpViewController.m in Sources */,
 				5D828F161EB2EB8800444027 /* FOManagedObjectDeserializer.m in Sources */,
-				5DFADCBF1EB3CE4800B21870 /* FOCourseDetailsViewController.m in Sources */,
+				5D7630A61EB7D1AB006E7C2E /* HeaderVideoOverlayComponent.m in Sources */,
 				5DFADCC61EB3D97C00B21870 /* ProfileViewController.m in Sources */,
 				5D828EF51EB2DF8400444027 /* FOBaseRequest.m in Sources */,
 				5D271DBC1EB144E800186D15 /* main.m in Sources */,
 				5D7B1AED1EB28C5100FD9DEA /* SignUpDelegate.m in Sources */,
 				5D828F0C1EB2E79F00444027 /* FOUserRequest.m in Sources */,
+				5D7630BF1EB7D5D8006E7C2E /* AmenitiesComponent.m in Sources */,
 				5D828F0F1EB2E82C00444027 /* FOAuthenticationRequest.m in Sources */,
+				5D7630A71EB7D1AB006E7C2E /* HoleByHoleComponent.m in Sources */,
 				5D7B1AE61EB2897B00FD9DEA /* AppDelegate.m in Sources */,
+				5D0868BF1EBA677600C71CA1 /* HoleByHoleTableViewCell.m in Sources */,
+				5D7630B61EB7D425006E7C2E /* OverviewVideoComponent.m in Sources */,
+				5D7630B01EB7D401006E7C2E /* MapInfoComponent.m in Sources */,
 				5DFADCC21EB3CE6500B21870 /* FOCoursesTableViewController.m in Sources */,
 				5D7B1AE71EB2897B00FD9DEA /* LayoutManager.m in Sources */,
 				5DFADCD61EB3F59200B21870 /* FOCourseCollectionViewCell.m in Sources */,
+				5D7630B31EB7D411006E7C2E /* WeatherInfoComponent.m in Sources */,
+				5D7630A91EB7D1AB006E7C2E /* ReviewsComponent.m in Sources */,
 				5DA32D401EB2A0A100A516B6 /* FOAccountService.m in Sources */,
 				5D828F131EB2E8FE00444027 /* FOMappingProvider.m in Sources */,
 				5D7B1AF31EB28CCA00FD9DEA /* FOFacebookService.m in Sources */,
+				5D7630991EB7D0E9006E7C2E /* FOCourseDetailsViewController.m in Sources */,
+				5D7630AD1EB7D3D6006E7C2E /* CourseInfoComponent.m in Sources */,
+				5D7630BC1EB7D5BE006E7C2E /* ParInfoComponent.m in Sources */,
 				5DAC6B691EB3B52C00FD7467 /* User.m in Sources */,
 				5D7B1AE81EB2897B00FD9DEA /* LoginViewController.m in Sources */,
+				5D7630C21EB7D5F6006E7C2E /* CallProShopComponent.m in Sources */,
 				5DFADCE11EB411C300B21870 /* CoursesCollectionView.m in Sources */,
 				5D828EFA1EB2E26100444027 /* FODAO.m in Sources */,
 				5D828F021EB2E38400444027 /* Fore.xcdatamodeld in Sources */,

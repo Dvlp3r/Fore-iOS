@@ -23,9 +23,9 @@
     
     if(self)
     {
-//        [[self layer] setBorderColor:[UIColor yellowColor].CGColor];
+//        [[self layer] setBorderColor:[UIColor whiteColor].CGColor];
 //        [[self layer] setBorderWidth:1];
-//        [self setBackgroundColor:[UIColor brownColor]];
+        [self setBackgroundColor:[UIColor whiteColor]];
         self.layoutManager = [[LayoutManager alloc] init];
         [self addSubviews];
     }
@@ -46,10 +46,14 @@
 -(void)layoutSubviews;
 {
     [super layoutSubviews];
-    [[self stateImageView] setFrame:CGRectMake(0, 0, CGRectGetWidth([self frame]), [self.layoutManager height:24])];
-    [[self stateLabel] setFrame:CGRectMake(0, [self.layoutManager height:25], CGRectGetWidth([self frame]), [self.layoutManager height:4])];
-//    [[self stateImageView] setFrame:CGRectMake(0, 0, CGRectGetWidth([self frame]), CGRectGetHeight([self frame])-[self.layoutManager height:3.9])];
-//    [[self stateLabel] setFrame:CGRectMake(0, CGRectGetMaxY([self stateImageView].frame), CGRectGetWidth([self frame]), [self.layoutManager height:3.9])];
+    [[self stateImageView] setFrame:CGRectMake(0, 0, CGRectGetWidth([self frame]), CGRectGetHeight([self frame]))];
+    [[self stateLabel] setFrame:CGRectMake(0, [[self layoutManager] height:25], CGRectGetWidth([self frame]), [self.layoutManager height:3.0])];
+
+//    [[self courseLabel] setFrame:CGRectMake(0, 0,
+//                                               CGRectGetWidth([[self contentView] frame]),
+//                                               CGRectGetHeight([[self contentView] frame])-20)];
+//                                               
+//    [[self stateLabel] setFrame:CGRectMake(0, CGRectGetMaxY([[self stateImageView] frame]), CGRectGetWidth([[self contentView] frame]), 20)];
 }
 
 #pragma mark - LazyLoading
@@ -61,7 +65,8 @@
     }
     
     _stateImageView = [[UIImageView alloc] init];
-//    [[_stateImageView layer] setBorderColor:[UIColor blackColor].CGColor];
+    [_stateImageView setBackgroundColor:[UIColor whiteColor]];
+//    [[_stateImageView layer] setBorderColor:[UIColor whiteColor].CGColor];
 //    [[_stateImageView layer] setBorderWidth:1];
     
     return _stateImageView;
@@ -75,7 +80,7 @@
     
     _stateLabel = [UILabel new];
     [_stateLabel setBackgroundColor:[UIColor whiteColor]];
-//    [[_stateLabel layer] setBorderColor:[UIColor redColor].CGColor];
+//    [[_stateLabel layer] setBorderColor:[UIColor whiteColor].CGColor];
 //    [[_stateLabel layer] setBorderWidth:1];
     [_stateLabel setTextAlignment:NSTextAlignmentLeft];
     [_stateLabel setFont:[UIFont systemFontOfSize:12]];

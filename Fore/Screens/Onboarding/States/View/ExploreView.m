@@ -42,12 +42,6 @@
     [self addSubview:[self coursesCollectionView]];
 }
 
--(void)reloadStatesCollectionView;
-{
-    NSLog(@"playersArray:%@",self.statesArray);
-    [[self statesCollectionView] reloadData];
-}
-
 -(void)updateConstraints;
 {
     [[self topLineView] mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -118,7 +112,9 @@
     
     _topLineView = [UIView new];
     [_topLineView setBackgroundColor:[UIColor lightGrayColor]];
-    
+//    [[_topLineView layer] setBorderColor:[UIColor blackColor].CGColor];
+//    [[_topLineView layer] setBorderWidth:1];
+
     return _topLineView;
 }
 
@@ -130,7 +126,9 @@
     
     _lineView = [UIView new];
     [_lineView setBackgroundColor:[UIColor lightGrayColor]];
-    
+//    [[_lineView layer] setBorderColor:[UIColor blackColor].CGColor];
+//    [[_lineView layer] setBorderWidth:1];
+
     return _lineView;
 }
 
@@ -183,6 +181,12 @@
 }
 
 #pragma mark - Delegate Methods
+
+-(void)reloadStatesCollectionView;
+{
+    NSLog(@"playersArray:%@",self.statesArray);
+    [[self statesCollectionView] reloadData];
+}
 
 -(void)showCoursesForCorrespondingState:(NSInteger)stateID;
 {

@@ -29,7 +29,7 @@
 - (instancetype)init;
 {
     self.layoutManager = [[LayoutManager alloc] init];
-//    [self setBackgroundColor:[UIColor greenColor]];
+    [self setBackgroundColor:[UIColor whiteColor]];
 
     self.cellStatesArray = [NSMutableArray array];
     
