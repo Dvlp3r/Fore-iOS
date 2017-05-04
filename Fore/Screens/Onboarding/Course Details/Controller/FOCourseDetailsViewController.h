@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FOWeatherAPIService.h"
 
 @interface FOCourseDetailsViewController : UIViewController
 

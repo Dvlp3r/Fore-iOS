@@ -13,6 +13,7 @@
 #import "OverViewComponent.h"
 #import "HoleByHoleComponent.h"
 #import "ReviewsComponent.h"
+#import "SOLWeatherData.h"
 
 @protocol FOCourseDetailsViewDataSource <NSObject>
 
@@ -36,6 +37,8 @@
 
 @property (nonatomic, assign) id<FOCourseDetailsViewDataSource> dataSource;
 @property (nonatomic, assign) id<FOCourseDetailsViewDelegate> delegate;
+
+- (void)updateWeatherViewWithData:(SOLWeatherData *)data;
 
 -(void)reloadOverviewTableView;
 -(void)reloadHolesTableView;

@@ -38,16 +38,16 @@
 }
     
 -(void)login:(NSDictionary *)userDetails completionBlock:(ServiceCompletion)completionBlock;
-    {
-        __weak typeof(self) weakSelf = self;
-        [[self authenticationRequest] login:userDetails completion:^(NSError *error, User *user) {
-            if (!error) {
-                [weakSelf setLoggedInUser:user];
-            }
-            completionBlock(error, user);
-        }];
-    }
-    
+{
+    __weak typeof(self) weakSelf = self;
+    [[self authenticationRequest] login:userDetails completion:^(NSError *error, User *user) {
+        if (!error) {
+            [weakSelf setLoggedInUser:user];
+        }
+        completionBlock(error, user);
+    }];
+}
+
 -(void)getMeWithCompletionBlock:(ServiceCompletion)completionBlock;
     {
         completionBlock(nil, [self currentUser]);

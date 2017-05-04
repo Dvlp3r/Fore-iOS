@@ -15,11 +15,14 @@
 #import "WeatherInfoComponent.h"
 #import "OverviewVideoComponent.h"
 #import "CallProShopComponent.h"
+#import "SOLWeatherData.h"
 
 @interface OverViewComponent()
 
 @property (nonatomic, strong) LayoutManager *layoutManager;
 @property (nonatomic, strong) UITableView *overViewTableView;
+@property (nonatomic, strong) SOLWeatherData *weatherModel;
+@property (strong, nonatomic) NSDateFormatter *dateFormatter;
 
 @end
 
@@ -98,7 +101,7 @@
             break;
         case 4:
             cell = [tableView dequeueReusableCellWithIdentifier:@"weatherInfoCellIdentifier"];
-            [(WeatherInfoComponent*)cell setDummyName:@"Weather info"];
+            [self updateCellData:(WeatherInfoComponent*)cell andWithData:self.weatherModel];
             break;
         case 5:
             cell = [tableView dequeueReusableCellWithIdentifier:@"overviewVideoCellIdentifier"];
@@ -136,10 +139,10 @@
             rowHeight = 100;
             break;
         case 3:
-            rowHeight = 160;
+            rowHeight = 300;
             break;
         case 4:
-            rowHeight = 80;
+            rowHeight = [[self layoutManager] height:25];
             break;
         case 5:
             rowHeight = 160;
@@ -176,6 +179,48 @@
     [_overViewTableView setBackgroundColor:[UIColor clearColor]];
     
     return _overViewTableView;
+}
+
+- (void)updateWeatherViewWithData:(SOLWeatherData *)data;
+{
+    self.dateFormatter = [[NSDateFormatter alloc]init];
+    [self.dateFormatter setDateFormat:@"day"];
+
+    self.weatherModel = data;
+    [[self overViewTableView] reloadData];
+}
+
+- (void)updateCellData:(WeatherInfoComponent *)cell andWithData:(SOLWeatherData *)data;
+{
+    SOLWeatherSnapshot *forecastDayOneSnapshot      = [data.forecastSnapshots objectAtIndex:0];
+    SOLWeatherSnapshot *forecastDayTwoSnapshot      = [data.forecastSnapshots objectAtIndex:1];
+    SOLWeatherSnapshot *forecastDayThreeSnapshot    = [data.forecastSnapshots objectAtIndex:2];
+    SOLWeatherSnapshot *forecastDayFourSnapshot     = [data.forecastSnapshots objectAtIndex:3];
+    
+    NSString *firstTemperatureText = [NSString stringWithFormat:@"%.0f/%.0f F",forecastDayOneSnapshot.highTemperature.fahrenheit,forecastDayOneSnapshot.lowTemperature.fahrenheit];
+    [(WeatherInfoComponent*)cell setFirstWeatherIcon:forecastDayOneSnapshot.icon];
+    [(WeatherInfoComponent*)cell setFirstWeatherDay:[forecastDayOneSnapshot.dayOfWeek substringWithRange:NSMakeRange(0, 3)]];
+    [(WeatherInfoComponent*)cell setFirstWeatherTemperature:firstTemperatureText];
+
+    NSString *secondTemperatureText = [NSString stringWithFormat:@"%.0f/%.0f F",forecastDayTwoSnapshot.highTemperature.fahrenheit,forecastDayTwoSnapshot.lowTemperature.fahrenheit];
+    [(WeatherInfoComponent*)cell setSecondWeatherIcon:forecastDayTwoSnapshot.icon];
+    [(WeatherInfoComponent*)cell setSecondWeatherDay:[forecastDayTwoSnapshot.dayOfWeek substringWithRange:NSMakeRange(0, 3)]];
+    [(WeatherInfoComponent*)cell setSecondWeatherTemperature:secondTemperatureText];
+
+    NSString *thirdTemperatureText = [NSString stringWithFormat:@"%.0f/%.0f F",forecastDayThreeSnapshot.highTemperature.fahrenheit,forecastDayThreeSnapshot.lowTemperature.fahrenheit];
+    [(WeatherInfoComponent*)cell setThirdWeatherIcon:forecastDayThreeSnapshot.icon];
+    [(WeatherInfoComponent*)cell setThirdWeatherDay:[forecastDayThreeSnapshot.dayOfWeek substringWithRange:NSMakeRange(0, 3)]];
+    [(WeatherInfoComponent*)cell setThirdWeatherTemperature:thirdTemperatureText];
+
+    NSString *fourthTemperatureText = [NSString stringWithFormat:@"%.0f/%.0f F",forecastDayFourSnapshot.highTemperature.fahrenheit,forecastDayFourSnapshot.lowTemperature.fahrenheit];
+    [(WeatherInfoComponent*)cell setFourthWeatherIcon:forecastDayFourSnapshot.icon];
+    [(WeatherInfoComponent*)cell setFourthWeatherDay:[forecastDayFourSnapshot.dayOfWeek substringWithRange:NSMakeRange(0, 3)]];
+    [(WeatherInfoComponent*)cell setFourthWeatherTemperature:fourthTemperatureText];
+    
+    [(WeatherInfoComponent*)cell setFirstWeatherSpeed:[NSString stringWithFormat:@"%.0f mph",forecastDayOneSnapshot.averageWindSpeed]];
+    [(WeatherInfoComponent*)cell setSecondWeatherSpeed:[NSString stringWithFormat:@"%.0f mph",forecastDayTwoSnapshot.averageWindSpeed]];
+    [(WeatherInfoComponent*)cell setThirdWeatherSpeed:[NSString stringWithFormat:@"%.0f mph",forecastDayThreeSnapshot.averageWindSpeed]];
+    [(WeatherInfoComponent*)cell setFourthWeatherSpeed:[NSString stringWithFormat:@"%.0f mph",forecastDayFourSnapshot.averageWindSpeed]];
 }
 
 @end

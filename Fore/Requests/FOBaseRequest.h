@@ -33,6 +33,8 @@ typedef void(^RequestPaginationCompletion)(NSError *error, id results, NSInteger
 -(NSError *)errorWithStatusCode:(AFHTTPRequestOperation *)operation withBaseError:(NSError *)error;
     
 -(void)GET:(NSString *)url withParams:(NSDictionary *)params  withCompletionBlock:(RequestCompletion)completionBlock;
+-(void)GETForWeather:(NSString *)url withParams:(NSDictionary *)params withCompletionBlock:(RequestCompletion)completionBlock;
+
 -(void)paginationGET:(NSString *)url withParams:(NSDictionary *)params withCompletionBlock:(RequestPaginationCompletion)completionBlock;
 -(void)noTokenPOST:(NSString *)url withParams:(NSDictionary *)params  withCompletionBlock:(RequestCompletion)completionBlock;
 -(void)POST:(NSString *)url withParams:(NSDictionary *)params  withCompletionBlock:(RequestCompletion)completionBlock;

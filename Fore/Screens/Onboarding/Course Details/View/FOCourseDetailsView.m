@@ -207,5 +207,8 @@
 
 }
 
-
+- (void)updateWeatherViewWithData:(SOLWeatherData *)data;
+{
+    [[self overViewComponent] updateWeatherViewWithData:data];
+}
 @end

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5D0868BF1EBA677600C71CA1 /* HoleByHoleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0868BE1EBA677600C71CA1 /* HoleByHoleTableViewCell.m */; };
+		5D0868C21EBA828400C71CA1 /* ReviewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0868C11EBA828400C71CA1 /* ReviewsTableViewCell.m */; };
 		5D145A5F1EB3909A00BC9276 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D145A5E1EB3909A00BC9276 /* QuartzCore.framework */; };
 		5D145A611EB390A100BC9276 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D145A601EB390A100BC9276 /* CoreGraphics.framework */; };
 		5D25E8281EB9581100FB45F8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D25E8271EB9581100FB45F8 /* MapKit.framework */; };
@@ -16,6 +17,14 @@
 		5D271DC51EB144E800186D15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D271DC31EB144E800186D15 /* Main.storyboard */; };
 		5D271DC71EB144E800186D15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D271DC61EB144E800186D15 /* Assets.xcassets */; };
 		5D271DCA1EB144E800186D15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D271DC81EB144E800186D15 /* LaunchScreen.storyboard */; };
+		5D3711BC1EBB867E003B07E4 /* FOWeatherAPIRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3711BB1EBB867E003B07E4 /* FOWeatherAPIRequest.m */; };
+		5D3711BF1EBB8698003B07E4 /* FOWeatherAPIService.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3711BE1EBB8698003B07E4 /* FOWeatherAPIService.m */; };
+		5D3711C11EBB8E2A003B07E4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D3711C01EBB8E2A003B07E4 /* CoreLocation.framework */; };
+		5D3711C41EBB954C003B07E4 /* SOLWeatherData.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3711C31EBB954C003B07E4 /* SOLWeatherData.m */; };
+		5D3711CB1EBB960B003B07E4 /* NSString+Substring.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3711C81EBB960B003B07E4 /* NSString+Substring.m */; };
+		5D3711CC1EBB960B003B07E4 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3711CA1EBB960B003B07E4 /* UIImage+ImageEffects.m */; };
+		5D3711CF1EBBB21F003B07E4 /* WeatherInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3711CE1EBBB21F003B07E4 /* WeatherInfoView.m */; };
+		5D3711D41EBBDF94003B07E4 /* Climacons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5D3711D31EBBDF94003B07E4 /* Climacons.ttf */; };
 		5D7630881EB7B4FB006E7C2E /* FOCourseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D7630871EB7B4FB006E7C2E /* FOCourseTableViewCell.m */; };
 		5D7630991EB7D0E9006E7C2E /* FOCourseDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D7630981EB7D0E9006E7C2E /* FOCourseDetailsViewController.m */; };
 		5D7630A61EB7D1AB006E7C2E /* HeaderVideoOverlayComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D76309C1EB7D1AB006E7C2E /* HeaderVideoOverlayComponent.m */; };
@@ -64,6 +73,8 @@
 /* Begin PBXFileReference section */
 		5D0868BD1EBA677600C71CA1 /* HoleByHoleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HoleByHoleTableViewCell.h; sourceTree = "<group>"; };
 		5D0868BE1EBA677600C71CA1 /* HoleByHoleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HoleByHoleTableViewCell.m; sourceTree = "<group>"; };
+		5D0868C01EBA828400C71CA1 /* ReviewsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewsTableViewCell.h; sourceTree = "<group>"; };
+		5D0868C11EBA828400C71CA1 /* ReviewsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewsTableViewCell.m; sourceTree = "<group>"; };
 		5D145A5E1EB3909A00BC9276 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		5D145A601EB390A100BC9276 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		5D25E8271EB9581100FB45F8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -74,6 +85,21 @@
 		5D271DC61EB144E800186D15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5D271DC91EB144E800186D15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5D271DCB1EB144E800186D15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D3711BA1EBB867E003B07E4 /* FOWeatherAPIRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FOWeatherAPIRequest.h; sourceTree = "<group>"; };
+		5D3711BB1EBB867E003B07E4 /* FOWeatherAPIRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FOWeatherAPIRequest.m; sourceTree = "<group>"; };
+		5D3711BD1EBB8698003B07E4 /* FOWeatherAPIService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FOWeatherAPIService.h; sourceTree = "<group>"; };
+		5D3711BE1EBB8698003B07E4 /* FOWeatherAPIService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FOWeatherAPIService.m; sourceTree = "<group>"; };
+		5D3711C01EBB8E2A003B07E4 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		5D3711C21EBB954C003B07E4 /* SOLWeatherData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOLWeatherData.h; sourceTree = "<group>"; };
+		5D3711C31EBB954C003B07E4 /* SOLWeatherData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOLWeatherData.m; sourceTree = "<group>"; };
+		5D3711C51EBB95C9003B07E4 /* Climacons.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Climacons.h; sourceTree = "<group>"; };
+		5D3711C71EBB960B003B07E4 /* NSString+Substring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Substring.h"; sourceTree = "<group>"; };
+		5D3711C81EBB960B003B07E4 /* NSString+Substring.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Substring.m"; sourceTree = "<group>"; };
+		5D3711C91EBB960B003B07E4 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		5D3711CA1EBB960B003B07E4 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		5D3711CD1EBBB21F003B07E4 /* WeatherInfoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherInfoView.h; sourceTree = "<group>"; };
+		5D3711CE1EBBB21F003B07E4 /* WeatherInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherInfoView.m; sourceTree = "<group>"; };
+		5D3711D31EBBDF94003B07E4 /* Climacons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Climacons.ttf; sourceTree = "<group>"; };
 		5D6D98C01EB1978200D0F8E3 /* Fore_PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Fore_PrefixHeader.pch; sourceTree = "<group>"; };
 		5D7630861EB7B4FB006E7C2E /* FOCourseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FOCourseTableViewCell.h; sourceTree = "<group>"; };
 		5D7630871EB7B4FB006E7C2E /* FOCourseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FOCourseTableViewCell.m; sourceTree = "<group>"; };
@@ -169,6 +195,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D3711C11EBB8E2A003B07E4 /* CoreLocation.framework in Frameworks */,
 				5D25E8281EB9581100FB45F8 /* MapKit.framework in Frameworks */,
 				5D145A611EB390A100BC9276 /* CoreGraphics.framework in Frameworks */,
 				5D145A5F1EB3909A00BC9276 /* QuartzCore.framework in Frameworks */,
@@ -194,6 +221,7 @@
 		5245AF4F15631236FF3189AB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5D3711C01EBB8E2A003B07E4 /* CoreLocation.framework */,
 				5D25E8271EB9581100FB45F8 /* MapKit.framework */,
 				5D145A601EB390A100BC9276 /* CoreGraphics.framework */,
 				5D145A5E1EB3909A00BC9276 /* QuartzCore.framework */,
@@ -234,6 +262,7 @@
 				5D7B1AD81EB2897B00FD9DEA /* Resources */,
 				5D7B1AD91EB2897B00FD9DEA /* Screens */,
 				5D7B1AE51EB2897B00FD9DEA /* Services */,
+				5D3711D31EBBDF94003B07E4 /* Climacons.ttf */,
 				5D271DC31EB144E800186D15 /* Main.storyboard */,
 				5D271DC61EB144E800186D15 /* Assets.xcassets */,
 				5D271DC81EB144E800186D15 /* LaunchScreen.storyboard */,
@@ -250,6 +279,17 @@
 				5D6D98C01EB1978200D0F8E3 /* Fore_PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5D3711C61EBB960B003B07E4 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				5D3711C71EBB960B003B07E4 /* NSString+Substring.h */,
+				5D3711C81EBB960B003B07E4 /* NSString+Substring.m */,
+				5D3711C91EBB960B003B07E4 /* UIImage+ImageEffects.h */,
+				5D3711CA1EBB960B003B07E4 /* UIImage+ImageEffects.m */,
+			);
+			path = Categories;
 			sourceTree = "<group>";
 		};
 		5D7630891EB7CFCB006E7C2E /* Controller */ = {
@@ -309,6 +349,8 @@
 			children = (
 				5D7630A41EB7D1AB006E7C2E /* ReviewsComponent.h */,
 				5D7630A51EB7D1AB006E7C2E /* ReviewsComponent.m */,
+				5D0868C01EBA828400C71CA1 /* ReviewsTableViewCell.h */,
+				5D0868C11EBA828400C71CA1 /* ReviewsTableViewCell.m */,
 			);
 			path = Reviews;
 			sourceTree = "<group>";
@@ -330,6 +372,8 @@
 				5D7630B51EB7D425006E7C2E /* OverviewVideoComponent.m */,
 				5D7630C01EB7D5F6006E7C2E /* CallProShopComponent.h */,
 				5D7630C11EB7D5F6006E7C2E /* CallProShopComponent.m */,
+				5D3711CD1EBBB21F003B07E4 /* WeatherInfoView.h */,
+				5D3711CE1EBBB21F003B07E4 /* WeatherInfoView.m */,
 			);
 			path = SubComponents;
 			sourceTree = "<group>";
@@ -372,6 +416,8 @@
 				5D828F0E1EB2E82C00444027 /* FOAuthenticationRequest.m */,
 				5D828F0A1EB2E79F00444027 /* FOUserRequest.h */,
 				5D828F0B1EB2E79F00444027 /* FOUserRequest.m */,
+				5D3711BA1EBB867E003B07E4 /* FOWeatherAPIRequest.h */,
+				5D3711BB1EBB867E003B07E4 /* FOWeatherAPIRequest.m */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -466,6 +512,8 @@
 				5D7B1AF21EB28CCA00FD9DEA /* FOFacebookService.m */,
 				5DA32D3E1EB2A0A100A516B6 /* FOAccountService.h */,
 				5DA32D3F1EB2A0A100A516B6 /* FOAccountService.m */,
+				5D3711BD1EBB8698003B07E4 /* FOWeatherAPIService.h */,
+				5D3711BE1EBB8698003B07E4 /* FOWeatherAPIService.m */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -501,8 +549,12 @@
 		5D828EFE1EB2E36600444027 /* Human */ = {
 			isa = PBXGroup;
 			children = (
+				5D3711C61EBB960B003B07E4 /* Categories */,
 				5DAC6B6A1EB3B53400FD7467 /* User.h */,
 				5DAC6B681EB3B52C00FD7467 /* User.m */,
+				5D3711C21EBB954C003B07E4 /* SOLWeatherData.h */,
+				5D3711C31EBB954C003B07E4 /* SOLWeatherData.m */,
+				5D3711C51EBB95C9003B07E4 /* Climacons.h */,
 			);
 			path = Human;
 			sourceTree = "<group>";
@@ -689,6 +741,7 @@
 			files = (
 				5D271DCA1EB144E800186D15 /* LaunchScreen.storyboard in Resources */,
 				5D271DC71EB144E800186D15 /* Assets.xcassets in Resources */,
+				5D3711D41EBBDF94003B07E4 /* Climacons.ttf in Resources */,
 				5D271DC51EB144E800186D15 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -754,6 +807,7 @@
 				5D7630C81EB7D769006E7C2E /* FOCourseDetailsView.m in Sources */,
 				5DFADCD81EB3F59200B21870 /* ExploreViewController.m in Sources */,
 				5DFADCDE1EB411AC00B21870 /* StatesCollectionView.m in Sources */,
+				5D3711CF1EBBB21F003B07E4 /* WeatherInfoView.m in Sources */,
 				5DAC6B6D1EB3B53C00FD7467 /* _User.m in Sources */,
 				5DFADCBB1EB3CE1800B21870 /* SavedViewController.m in Sources */,
 				5D7B1AF01EB28C9300FD9DEA /* FOBaseService.m in Sources */,
@@ -767,19 +821,24 @@
 				5D7B1AED1EB28C5100FD9DEA /* SignUpDelegate.m in Sources */,
 				5D828F0C1EB2E79F00444027 /* FOUserRequest.m in Sources */,
 				5D7630BF1EB7D5D8006E7C2E /* AmenitiesComponent.m in Sources */,
+				5D3711BF1EBB8698003B07E4 /* FOWeatherAPIService.m in Sources */,
 				5D828F0F1EB2E82C00444027 /* FOAuthenticationRequest.m in Sources */,
 				5D7630A71EB7D1AB006E7C2E /* HoleByHoleComponent.m in Sources */,
 				5D7B1AE61EB2897B00FD9DEA /* AppDelegate.m in Sources */,
 				5D0868BF1EBA677600C71CA1 /* HoleByHoleTableViewCell.m in Sources */,
 				5D7630B61EB7D425006E7C2E /* OverviewVideoComponent.m in Sources */,
+				5D0868C21EBA828400C71CA1 /* ReviewsTableViewCell.m in Sources */,
 				5D7630B01EB7D401006E7C2E /* MapInfoComponent.m in Sources */,
 				5DFADCC21EB3CE6500B21870 /* FOCoursesTableViewController.m in Sources */,
 				5D7B1AE71EB2897B00FD9DEA /* LayoutManager.m in Sources */,
 				5DFADCD61EB3F59200B21870 /* FOCourseCollectionViewCell.m in Sources */,
 				5D7630B31EB7D411006E7C2E /* WeatherInfoComponent.m in Sources */,
 				5D7630A91EB7D1AB006E7C2E /* ReviewsComponent.m in Sources */,
+				5D3711CC1EBB960B003B07E4 /* UIImage+ImageEffects.m in Sources */,
 				5DA32D401EB2A0A100A516B6 /* FOAccountService.m in Sources */,
+				5D3711C41EBB954C003B07E4 /* SOLWeatherData.m in Sources */,
 				5D828F131EB2E8FE00444027 /* FOMappingProvider.m in Sources */,
+				5D3711CB1EBB960B003B07E4 /* NSString+Substring.m in Sources */,
 				5D7B1AF31EB28CCA00FD9DEA /* FOFacebookService.m in Sources */,
 				5D7630991EB7D0E9006E7C2E /* FOCourseDetailsViewController.m in Sources */,
 				5D7630AD1EB7D3D6006E7C2E /* CourseInfoComponent.m in Sources */,
@@ -787,6 +846,7 @@
 				5DAC6B691EB3B52C00FD7467 /* User.m in Sources */,
 				5D7B1AE81EB2897B00FD9DEA /* LoginViewController.m in Sources */,
 				5D7630C21EB7D5F6006E7C2E /* CallProShopComponent.m in Sources */,
+				5D3711BC1EBB867E003B07E4 /* FOWeatherAPIRequest.m in Sources */,
 				5DFADCE11EB411C300B21870 /* CoursesCollectionView.m in Sources */,
 				5D828EFA1EB2E26100444027 /* FODAO.m in Sources */,
 				5D828F021EB2E38400444027 /* Fore.xcdatamodeld in Sources */,

@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SOLWeatherData.h"
 
 @interface OverViewComponent : UIView<UITableViewDataSource,UITableViewDelegate>
+
+- (void)updateWeatherViewWithData:(SOLWeatherData *)data;
 
 @end

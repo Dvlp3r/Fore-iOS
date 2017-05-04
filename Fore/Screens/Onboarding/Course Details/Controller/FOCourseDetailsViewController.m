@@ -9,6 +9,7 @@
 #import "FOCourseDetailsViewController.h"
 #import "FOCourseDetailsView.h"
 #import "LayoutManager.h"
+#import "SOLWeatherData.h"
 
 @interface FOCourseDetailsViewController ()<FOCourseDetailsViewDataSource,FOCourseDetailsViewDelegate>
 
@@ -19,6 +20,9 @@
 @property(nonatomic, strong) UISearchBar *searchbar;
 @property(nonatomic, strong) NSMutableArray *statesArray;
 @property(nonatomic, strong) FOCourseDetailsView *courseDetailsView;
+
+//  Formats weather data timestamps
+@property (strong, nonatomic) NSDateFormatter       *dateFormatter;
 
 @end
 
@@ -51,6 +55,22 @@
     [rightBarButtonItems addSubview:self.starButton];
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:rightBarButtonItems];
+    
+    
+    [[FOWeatherAPIService sharedInstance] getWeatherInfo:nil withCompletion:^(NSError *error, id results) {
+        NSLog(@"results:%@",results);
+        [self updateWeatherViewWithData:results];
+    }];
+    
+}
+
+- (void)updateWeatherViewWithData:(SOLWeatherData *)data
+{
+    if(!data) {
+        return;
+    }
+    
+    [[self courseDetailsView] updateWeatherViewWithData:data];
 }
 
 - (void)didReceiveMemoryWarning {

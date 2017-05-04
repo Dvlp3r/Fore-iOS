@@ -1,14 +1,14 @@
 //
-//  WeatherInfoComponent.h
+//  WeatherInfoView.h
 //  Fore
 //
-//  Created by pavan krishna on 01/05/17.
+//  Created by pavan krishna on 04/05/17.
 //  Copyright © 2017 Dvlper. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface WeatherInfoComponent : UITableViewCell
+@interface WeatherInfoView : UIView
 
 -(void)setFirstWeatherIcon:(NSString *)icon;
 -(void)setFirstWeatherDay:(NSString *)day;

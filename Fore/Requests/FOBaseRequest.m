@@ -49,6 +49,16 @@
         completionBlock([self errorWithStatusCode:operation withBaseError:error], nil);
     }];
 }
+
+-(void)GETForWeather:(NSString *)url withParams:(NSDictionary *)params withCompletionBlock:(RequestCompletion)completionBlock;
+{
+    [[self jsonManager] GET:url parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        completionBlock(nil,responseObject);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        completionBlock([self errorWithStatusCode:operation withBaseError:error], nil);
+    }];
+}
+
     
 -(void)paginationGET:(NSString *)url withParams:(NSDictionary *)params withCompletionBlock:(RequestPaginationCompletion)completionBlock;
 {

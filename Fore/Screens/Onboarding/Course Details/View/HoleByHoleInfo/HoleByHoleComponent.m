@@ -80,7 +80,7 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;
 {
-    return 70;
+    return [[self layoutManager] height:14.5];
 }
 
 #pragma mark - Lazy Loading
