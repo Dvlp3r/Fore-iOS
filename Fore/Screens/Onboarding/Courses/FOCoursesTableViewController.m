@@ -8,9 +8,11 @@
 
 #import "FOCoursesTableViewController.h"
 #import "FOCourseTableViewCell.h"
+#import "LayoutManager.h"
 
 @interface FOCoursesTableViewController ()<UISearchBarDelegate,UIScrollViewDelegate>
 
+@property (nonatomic, strong) LayoutManager *layoutManager;
 @property(nonatomic, strong) UISearchBar *searchbar;
 
 @end
@@ -19,7 +21,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.    
+    // Do any additional setup after loading the view.
+    self.layoutManager = [[LayoutManager alloc] init];
+
     [self.navigationController.navigationBar setBackgroundImage:[UIImage new]
                                                   forBarMetrics:UIBarMetricsDefault];
     self.navigationController.navigationBar.shadowImage = [UIImage new];
@@ -78,7 +82,7 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;
 {
-    return 250;
+    return [[self layoutManager] height:40];
 }
 
 /*

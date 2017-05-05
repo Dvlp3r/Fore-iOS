@@ -27,14 +27,16 @@
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        [self addViews];
+//        [self setBackgroundColor:[UIColor yellowColor]];
+//        [self addViews];
     }
     return self;
 }
 
 -(id)initWithCoder:(NSCoder *)aDecoder {
     if ( !(self = [super initWithCoder:aDecoder]) ) return nil;
-    
+    [self setBackgroundColor:[UIColor whiteColor]];
+
     // Your code goes here!
     [self addViews];
     return self;
@@ -62,32 +64,38 @@
 {
     [super layoutSubviews];
     
-    CGRect screenFrame = [[UIScreen mainScreen] bounds];
+    CGFloat screenWidth = [[UIScreen mainScreen] bounds].size.width;
+    CGFloat screenHeight = [[self contentView] frame].size.height;
     
-    [[self courseImageView] setFrame:CGRectMake(0,
-                                               0,
-                                               CGRectGetWidth(screenFrame),
-                                               CGRectGetHeight(screenFrame)/3)];
+    [[self courseImageView] setFrame:CGRectMake((screenWidth * 6.25)/100,
+                                              (screenHeight * 5)/100,
+                                              (screenWidth * 87.5)/100,
+                                              (screenHeight * 80)/100)];
     
-    [[self nameOfCourseLabel] setFrame:CGRectMake(0,
-                                              CGRectGetMaxY([[self courseImageView] frame])+5,
+    [[self nameOfCourseLabel] setFrame:CGRectMake((screenWidth * 6.25)/100,
+                                              CGRectGetMaxY([[self courseImageView] frame])+(screenHeight * 2)/100,
                                               CGRectGetWidth([self frame])/2,
                                               10)];
+    [[self nameOfCourseLabel] sizeToFit];
     
-    [[self townLabel] setFrame:CGRectMake(0,
-                                                  CGRectGetMaxY([[self nameOfCourseLabel] frame])+3,
+    [[self townLabel] setFrame:CGRectMake((screenWidth * 6.25)/100,
+                                                  CGRectGetMaxY([[self nameOfCourseLabel] frame]),
                                                   CGRectGetWidth([self frame])/2,
                                                   10)];
+    [[self townLabel] sizeToFit];
     
-    [[self parLabel] setFrame:CGRectMake(CGRectGetMaxX([[self courseImageView] frame])-CGRectGetWidth([self frame])/5,
-                                         CGRectGetMaxY([[self courseImageView] frame])+15,
-                                         CGRectGetWidth([self frame])/5,
-                                         10)];
+    [[self slopeLabel] setFrame:CGRectMake(CGRectGetMaxX([[self courseImageView] frame])-(screenWidth/9),
+                                           CGRectGetMaxY([[self courseImageView] frame])+(screenHeight * 2)/100,
+                                           screenWidth/9,
+                                           10)];
+//    [[self slopeLabel] sizeToFit];
 
-    [[self slopeLabel] setFrame:CGRectMake(CGRectGetMaxX([[self parLabel] frame])+3,
-                                         CGRectGetMaxY([[self courseImageView] frame])+15,
-                                         CGRectGetWidth([self frame])/5,
+    [[self parLabel] setFrame:CGRectMake(CGRectGetMinX([[self slopeLabel] frame])-screenWidth/9,
+                                         CGRectGetMaxY([[self courseImageView] frame])+(screenHeight * 2)/100,
+                                         screenWidth/9,
                                          10)];
+//    [[self parLabel] sizeToFit];
+    
 }
 
 - (void)awakeFromNib {
@@ -137,10 +145,8 @@
     }
     
     _courseImageView = [UIImageView new];
-//    [[_courseImageView layer] setBorderColor:[UIColor redColor].CGColor];
+//    [[_courseImageView layer] setBorderColor:[UIColor blackColor].CGColor];
 //    [[_courseImageView layer] setBorderWidth:1];
-    [_courseImageView setImage:[UIImage imageNamed:@"icon_time_display"]];
-    [_courseImageView sizeToFit];
     
     return _courseImageView;
 }
@@ -150,9 +156,7 @@
     UILabel *label = [UILabel new];
 //    [[label layer] setBorderColor:[UIColor redColor].CGColor];
 //    [[label layer] setBorderWidth:1];
-    [label setFont:[UIFont systemFontOfSize:10]];
     [label setTextColor:[UIColor lightGrayColor]];
-    [label setTextAlignment:NSTextAlignmentLeft];
     
     return label;
 }
@@ -164,7 +168,20 @@
     }
     
     _nameOfCourseLabel = [self newLabel];
-    
+    [_nameOfCourseLabel setTextAlignment:NSTextAlignmentLeft];
+    if IS_IPHONE_5
+    {
+        [_nameOfCourseLabel setFont:[UIFont boldSystemFontOfSize:12]];
+    }
+    else if (IS_IPHONE_6P)
+    {
+        [_nameOfCourseLabel setFont:[UIFont boldSystemFontOfSize:17]];
+    }
+    else if (IS_IPHONE_6)
+    {
+        [_nameOfCourseLabel setFont:[UIFont boldSystemFontOfSize:15]];
+    }
+
     return _nameOfCourseLabel;
 }
 
@@ -175,6 +192,19 @@
     }
     
     _townLabel = [self newLabel];
+    [_townLabel setTextAlignment:NSTextAlignmentLeft];
+    if IS_IPHONE_5
+    {
+        [_townLabel setFont:[UIFont systemFontOfSize:10]];
+    }
+    else if (IS_IPHONE_6P)
+    {
+        [_townLabel setFont:[UIFont systemFontOfSize:14]];
+    }
+    else if (IS_IPHONE_6)
+    {
+        [_townLabel setFont:[UIFont systemFontOfSize:12]];
+    }
     
     return _townLabel;
 }
@@ -186,7 +216,19 @@
     }
     
     _parLabel = [self newLabel];
-    
+    [_parLabel setTextAlignment:NSTextAlignmentRight];
+    if IS_IPHONE_5
+    {
+        [_parLabel setFont:[UIFont systemFontOfSize:8]];
+    }
+    else if (IS_IPHONE_6P)
+    {
+        [_parLabel setFont:[UIFont systemFontOfSize:12]];
+    }
+    else if (IS_IPHONE_6)
+    {
+        [_parLabel setFont:[UIFont systemFontOfSize:10]];
+    }
     return _parLabel;
 }
 
@@ -197,7 +239,19 @@
     }
     
     _slopeLabel = [self newLabel];
-    
+    [_slopeLabel setTextAlignment:NSTextAlignmentRight];
+    if IS_IPHONE_5
+    {
+        [_slopeLabel setFont:[UIFont systemFontOfSize:8]];
+    }
+    else if (IS_IPHONE_6P)
+    {
+        [_slopeLabel setFont:[UIFont systemFontOfSize:12]];
+    }
+    else if (IS_IPHONE_6)
+    {
+        [_slopeLabel setFont:[UIFont systemFontOfSize:10]];
+    }
     return _slopeLabel;
 }
 
