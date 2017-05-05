@@ -29,13 +29,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.layoutManager = [[LayoutManager alloc] init];
-
-    [self.navigationController.navigationBar setBackgroundImage:[UIImage new]
-                                                  forBarMetrics:UIBarMetricsDefault];
-    self.navigationController.navigationBar.shadowImage = [UIImage new];
-    self.navigationController.navigationBar.translucent = YES;
-    self.navigationController.view.backgroundColor = [UIColor clearColor];
-    self.navigationController.navigationBar.backgroundColor = [UIColor clearColor];
+//    [self showTransparentNaviagtionBar];
+//    [self.navigationController.navigationBar setBackgroundImage:[UIImage new]
+//                                                  forBarMetrics:UIBarMetricsDefault];
+//    self.navigationController.navigationBar.shadowImage = [UIImage new];
+//    self.navigationController.navigationBar.translucent = YES;
+//    self.navigationController.view.backgroundColor = [UIColor clearColor];
+//    self.navigationController.navigationBar.backgroundColor = [UIColor clearColor];
     
     [self createSearchBar];
     
@@ -76,6 +76,14 @@
     [negativeSpacer setWidth:-15];
     
     self.navigationItem.leftBarButtonItems = [NSArray arrayWithObjects:negativeSpacer,backButtonItem,nil];
+}
+
+-(void)viewWillAppear:(BOOL)animated;
+{
+    [super viewWillAppear:animated];
+    if ([[self shyNavBarManager] scrollView]==nil) {
+        [[self shyNavBarManager] setScrollView:[self tableView]];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -191,6 +199,23 @@
 -(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView;
 {
     [self.searchbar endEditing:YES];
+//    [self showNormalNaviagtionBar];
+}
+
+-(void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView;
+{
+//    [self showNormalNaviagtionBar];
+}
+
+-(void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
+{
+    [self.searchbar endEditing:YES];
+//    [self showTransparentNaviagtionBar];
+}
+
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView; // called when setContentOffset/scrollRectVisible:animated: finishes. not called if not animating
+{
+//    [self showTransparentNaviagtionBar];
 }
 
 - (void)searchBarTextDidBeginEditing:(SSSearchBar *)searchBar
@@ -211,5 +236,26 @@
     self.navigationItem.leftBarButtonItems = [NSArray arrayWithObjects:negativeSpacer,backButtonItem,nil];
 }
 
+-(void)showTransparentNaviagtionBar;
+{
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
+    [self.navigationController.navigationBar setTranslucent:YES];
+    [self.navigationController.navigationBar setShadowImage:[UIImage new]];
+    self.navigationController.navigationBar.hidden = NO;
+    
+//    [self.navigationController.navigationBar setBackgroundImage:[UIImage new]
+//                                                  forBarMetrics:UIBarMetricsDefault];
+//    self.navigationController.navigationBar.shadowImage = [UIImage new];
+//    self.navigationController.navigationBar.translucent = YES;
+//    self.navigationController.view.backgroundColor = [UIColor clearColor];
+//    self.navigationController.navigationBar.backgroundColor = [UIColor clearColor];
+}
+
+-(void)showNormalNaviagtionBar;
+{
+    self.navigationController.navigationBar.hidden = YES;
+    [self.navigationController.navigationBar setBackgroundImage:[[UINavigationBar appearance] backgroundImageForBarMetrics:UIBarMetricsDefault] forBarMetrics:UIBarMetricsDefault];
+    [self.navigationController.navigationBar setTranslucent:[[UINavigationBar appearance] isTranslucent]];
+    [self.navigationController.navigationBar setShadowImage:[[UINavigationBar appearance] shadowImage]];}
 
 @end

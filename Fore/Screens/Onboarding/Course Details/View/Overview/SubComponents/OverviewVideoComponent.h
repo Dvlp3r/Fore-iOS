@@ -10,6 +10,14 @@
 
 @interface OverviewVideoComponent : UITableViewCell
 
--(void)setDummyName:(NSString *)townName;
+@property (nonatomic, strong) UIImageView *mediaIcon;
+
+-(void)prepareForReuse;
+
+-(void)setVideoURL:(NSURL *)videoURL;
+
+//Video
+-(void)play;
+-(void)pause;
 
 @end

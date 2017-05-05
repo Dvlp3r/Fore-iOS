@@ -105,7 +105,7 @@
             break;
         case 5:
             cell = [tableView dequeueReusableCellWithIdentifier:@"overviewVideoCellIdentifier"];
-            [(OverviewVideoComponent*)cell setDummyName:@"Video Component"];
+//            [(OverviewVideoComponent*)cell setDummyName:@"Video Component"];
             break;
         case 6:
             cell = [tableView dequeueReusableCellWithIdentifier:@"callProShopCellIdentifier"];
@@ -139,7 +139,7 @@
             rowHeight = 100;
             break;
         case 3:
-            rowHeight = 300;
+            rowHeight = 160;
             break;
         case 4:
             rowHeight = [[self layoutManager] height:25];

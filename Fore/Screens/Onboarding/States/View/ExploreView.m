@@ -45,28 +45,58 @@
 -(void)updateConstraints;
 {
     [[self topLineView] mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.mas_top).offset([self.layoutManager height:11]);
-        make.height.equalTo(@([self.layoutManager height:0.05]));
+        if (IS_IPHONE_4_OR_LESS)
+        {
+            make.top.equalTo(self.mas_top).offset([self.layoutManager height:13.5]);
+            make.height.equalTo(@([self.layoutManager height:0.10]));
+        }
+        else
+        {
+            make.top.equalTo(self.mas_top).offset([self.layoutManager height:11]);
+            make.height.equalTo(@([self.layoutManager height:0.05]));
+        }
         make.left.equalTo(self).offset([self.layoutManager width:7]);
         make.right.equalTo(self).offset(-[self.layoutManager width:7]);
     }];
 
     [[self featuredDestinationsTitle] mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.topLineView.mas_bottom).offset([self.layoutManager height:1]);
+        if (IS_IPHONE_4_OR_LESS)
+        {
+            make.top.equalTo(self.topLineView.mas_bottom).offset([self.layoutManager height:0]);
+        }
+        else
+        {
+            make.top.equalTo(self.topLineView.mas_bottom).offset([self.layoutManager height:1]);
+        }
         make.height.equalTo(@([self.layoutManager height:5]));
         make.left.equalTo(self).offset([self.layoutManager width:7]);
         make.right.equalTo(self).offset(-[self.layoutManager width:7]);
     }];
 
     [[self statesCollectionView] mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.featuredDestinationsTitle.mas_bottom).offset([self.layoutManager height:0]);
+        if (IS_IPHONE_4_OR_LESS)
+        {
+            make.top.equalTo(self.featuredDestinationsTitle.mas_bottom).offset(-[self.layoutManager height:2]);
+        }
+        else
+        {
+            make.top.equalTo(self.featuredDestinationsTitle.mas_bottom).offset([self.layoutManager height:0]);
+        }
         make.height.equalTo(@([self.layoutManager height:35]));
         make.left.equalTo(self).offset([self.layoutManager width:2]);
         make.right.equalTo(self).offset(-[self.layoutManager width:2]);
     }];
 
     [[self lineView] mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.statesCollectionView.mas_bottom).offset([self.layoutManager height:0]);
+        if (IS_IPHONE_4_OR_LESS)
+        {
+            make.top.equalTo(self.statesCollectionView.mas_bottom).offset(-[self.layoutManager height:2]);
+        }
+        else
+        {
+            make.top.equalTo(self.statesCollectionView.mas_bottom).offset([self.layoutManager height:0]);
+        }
+
         make.height.equalTo(@([self.layoutManager height:0.05]));
         make.left.equalTo(self).offset([self.layoutManager width:5]);
         make.right.equalTo(self).offset(-[self.layoutManager width:5]);

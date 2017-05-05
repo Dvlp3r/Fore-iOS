@@ -11,6 +11,13 @@
 		5D0868C21EBA828400C71CA1 /* ReviewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0868C11EBA828400C71CA1 /* ReviewsTableViewCell.m */; };
 		5D145A5F1EB3909A00BC9276 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D145A5E1EB3909A00BC9276 /* QuartzCore.framework */; };
 		5D145A611EB390A100BC9276 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D145A601EB390A100BC9276 /* CoreGraphics.framework */; };
+		5D1EC5911EBC428400745F82 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 5D1EC5831EBC428400745F82 /* LICENSE */; };
+		5D1EC5921EBC428400745F82 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 5D1EC5841EBC428400745F82 /* README.md */; };
+		5D1EC5931EBC428400745F82 /* NSObject+TLYSwizzlingHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1EC5881EBC428400745F82 /* NSObject+TLYSwizzlingHelpers.m */; };
+		5D1EC5941EBC428400745F82 /* UIViewController+BetterLayoutGuides.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1EC58A1EBC428400745F82 /* UIViewController+BetterLayoutGuides.m */; };
+		5D1EC5951EBC428400745F82 /* TLYDelegateProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1EC58C1EBC428400745F82 /* TLYDelegateProxy.m */; };
+		5D1EC5961EBC428400745F82 /* TLYShyNavBarManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1EC58E1EBC428400745F82 /* TLYShyNavBarManager.m */; };
+		5D1EC5971EBC428400745F82 /* TLYShyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D1EC5901EBC428400745F82 /* TLYShyViewController.m */; };
 		5D25E8281EB9581100FB45F8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D25E8271EB9581100FB45F8 /* MapKit.framework */; };
 		5D25E82A1EB9658800FB45F8 /* OverViewComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D25E8291EB9658800FB45F8 /* OverViewComponent.m */; };
 		5D271DBC1EB144E800186D15 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D271DBB1EB144E800186D15 /* main.m */; };
@@ -82,6 +89,18 @@
 		5D0868C11EBA828400C71CA1 /* ReviewsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewsTableViewCell.m; sourceTree = "<group>"; };
 		5D145A5E1EB3909A00BC9276 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		5D145A601EB390A100BC9276 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5D1EC5831EBC428400745F82 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		5D1EC5841EBC428400745F82 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		5D1EC5871EBC428400745F82 /* NSObject+TLYSwizzlingHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+TLYSwizzlingHelpers.h"; sourceTree = "<group>"; };
+		5D1EC5881EBC428400745F82 /* NSObject+TLYSwizzlingHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+TLYSwizzlingHelpers.m"; sourceTree = "<group>"; };
+		5D1EC5891EBC428400745F82 /* UIViewController+BetterLayoutGuides.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BetterLayoutGuides.h"; sourceTree = "<group>"; };
+		5D1EC58A1EBC428400745F82 /* UIViewController+BetterLayoutGuides.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BetterLayoutGuides.m"; sourceTree = "<group>"; };
+		5D1EC58B1EBC428400745F82 /* TLYDelegateProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLYDelegateProxy.h; sourceTree = "<group>"; };
+		5D1EC58C1EBC428400745F82 /* TLYDelegateProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLYDelegateProxy.m; sourceTree = "<group>"; };
+		5D1EC58D1EBC428400745F82 /* TLYShyNavBarManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLYShyNavBarManager.h; sourceTree = "<group>"; };
+		5D1EC58E1EBC428400745F82 /* TLYShyNavBarManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLYShyNavBarManager.m; sourceTree = "<group>"; };
+		5D1EC58F1EBC428400745F82 /* TLYShyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLYShyViewController.h; sourceTree = "<group>"; };
+		5D1EC5901EBC428400745F82 /* TLYShyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLYShyViewController.m; sourceTree = "<group>"; };
 		5D25E8271EB9581100FB45F8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		5D25E8291EB9658800FB45F8 /* OverViewComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverViewComponent.m; sourceTree = "<group>"; };
 		5D271DB71EB144E800186D15 /* Fore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fore.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,8 +125,6 @@
 		5D3711CE1EBBB21F003B07E4 /* WeatherInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherInfoView.m; sourceTree = "<group>"; };
 		5D3711D31EBBDF94003B07E4 /* Climacons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Climacons.ttf; sourceTree = "<group>"; };
 		5D6D98C01EB1978200D0F8E3 /* Fore_PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Fore_PrefixHeader.pch; sourceTree = "<group>"; };
-		5D70E9E21EBC1B7B00670A3C /* CustomTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTextField.h; sourceTree = "<group>"; };
-		5D70E9E31EBC1B7B00670A3C /* CustomTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTextField.m; sourceTree = "<group>"; };
 		5D70E9E71EBC207300670A3C /* close-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close-icon.png"; sourceTree = "<group>"; };
 		5D70E9E81EBC207300670A3C /* close-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close-icon@2x.png"; sourceTree = "<group>"; };
 		5D70E9E91EBC207300670A3C /* search-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search-icon.png"; sourceTree = "<group>"; };
@@ -244,6 +261,41 @@
 				84AEB29DA7207E241503DE72 /* Pods_Fore.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5D1EC5821EBC428400745F82 /* TLYShyNavBar */ = {
+			isa = PBXGroup;
+			children = (
+				5D1EC5831EBC428400745F82 /* LICENSE */,
+				5D1EC5841EBC428400745F82 /* README.md */,
+				5D1EC5851EBC428400745F82 /* TLYShyNavBar */,
+			);
+			path = TLYShyNavBar;
+			sourceTree = "<group>";
+		};
+		5D1EC5851EBC428400745F82 /* TLYShyNavBar */ = {
+			isa = PBXGroup;
+			children = (
+				5D1EC5861EBC428400745F82 /* Categories */,
+				5D1EC58B1EBC428400745F82 /* TLYDelegateProxy.h */,
+				5D1EC58C1EBC428400745F82 /* TLYDelegateProxy.m */,
+				5D1EC58D1EBC428400745F82 /* TLYShyNavBarManager.h */,
+				5D1EC58E1EBC428400745F82 /* TLYShyNavBarManager.m */,
+				5D1EC58F1EBC428400745F82 /* TLYShyViewController.h */,
+				5D1EC5901EBC428400745F82 /* TLYShyViewController.m */,
+			);
+			path = TLYShyNavBar;
+			sourceTree = "<group>";
+		};
+		5D1EC5861EBC428400745F82 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				5D1EC5871EBC428400745F82 /* NSObject+TLYSwizzlingHelpers.h */,
+				5D1EC5881EBC428400745F82 /* NSObject+TLYSwizzlingHelpers.m */,
+				5D1EC5891EBC428400745F82 /* UIViewController+BetterLayoutGuides.h */,
+				5D1EC58A1EBC428400745F82 /* UIViewController+BetterLayoutGuides.m */,
+			);
+			path = Categories;
 			sourceTree = "<group>";
 		};
 		5D271DAE1EB144E800186D15 = {
@@ -424,10 +476,9 @@
 		5D7B1AD31EB2897B00FD9DEA /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				5D1EC5821EBC428400745F82 /* TLYShyNavBar */,
 				5D7B1AD41EB2897B00FD9DEA /* LayoutManager.h */,
 				5D7B1AD51EB2897B00FD9DEA /* LayoutManager.m */,
-				5D70E9E21EBC1B7B00670A3C /* CustomTextField.h */,
-				5D70E9E31EBC1B7B00670A3C /* CustomTextField.m */,
 				5D70E9E51EBC207300670A3C /* SSSearchBar */,
 			);
 			path = Components;
@@ -782,6 +833,7 @@
 				5D70E9F01EBC207300670A3C /* search-icon@2x.png in Resources */,
 				5D3711D41EBBDF94003B07E4 /* Climacons.ttf in Resources */,
 				5D271DC51EB144E800186D15 /* Main.storyboard in Resources */,
+				5D1EC5911EBC428400745F82 /* LICENSE in Resources */,
 				5D70E9ED1EBC207300670A3C /* close-icon.png in Resources */,
 				5D70E9EF1EBC207300670A3C /* search-icon.png in Resources */,
 			);
@@ -851,6 +903,7 @@
 				5D3711CF1EBBB21F003B07E4 /* WeatherInfoView.m in Sources */,
 				5DAC6B6D1EB3B53C00FD7467 /* _User.m in Sources */,
 				5DFADCBB1EB3CE1800B21870 /* SavedViewController.m in Sources */,
+				5D1EC5931EBC428400745F82 /* NSObject+TLYSwizzlingHelpers.m in Sources */,
 				5D7B1AF01EB28C9300FD9DEA /* FOBaseService.m in Sources */,
 				5DFADCD71EB3F59200B21870 /* FOStateCollectionViewCell.m in Sources */,
 				5D7B1AE91EB2897B00FD9DEA /* SignUpViewController.m in Sources */,
@@ -862,6 +915,7 @@
 				5D271DBC1EB144E800186D15 /* main.m in Sources */,
 				5D7B1AED1EB28C5100FD9DEA /* SignUpDelegate.m in Sources */,
 				5D828F0C1EB2E79F00444027 /* FOUserRequest.m in Sources */,
+				5D1EC5971EBC428400745F82 /* TLYShyViewController.m in Sources */,
 				5D7630BF1EB7D5D8006E7C2E /* AmenitiesComponent.m in Sources */,
 				5D3711BF1EBB8698003B07E4 /* FOWeatherAPIService.m in Sources */,
 				5D828F0F1EB2E82C00444027 /* FOAuthenticationRequest.m in Sources */,
@@ -877,17 +931,21 @@
 				5D7630B31EB7D411006E7C2E /* WeatherInfoComponent.m in Sources */,
 				5D7630A91EB7D1AB006E7C2E /* ReviewsComponent.m in Sources */,
 				5D3711CC1EBB960B003B07E4 /* UIImage+ImageEffects.m in Sources */,
+				5D1EC5941EBC428400745F82 /* UIViewController+BetterLayoutGuides.m in Sources */,
 				5DA32D401EB2A0A100A516B6 /* FOAccountService.m in Sources */,
 				5D3711C41EBB954C003B07E4 /* SOLWeatherData.m in Sources */,
 				5D828F131EB2E8FE00444027 /* FOMappingProvider.m in Sources */,
 				5D3711CB1EBB960B003B07E4 /* NSString+Substring.m in Sources */,
+				5D1EC5951EBC428400745F82 /* TLYDelegateProxy.m in Sources */,
 				5D7B1AF31EB28CCA00FD9DEA /* FOFacebookService.m in Sources */,
 				5D7630991EB7D0E9006E7C2E /* FOCourseDetailsViewController.m in Sources */,
 				5D7630AD1EB7D3D6006E7C2E /* CourseInfoComponent.m in Sources */,
 				5D7630BC1EB7D5BE006E7C2E /* ParInfoComponent.m in Sources */,
 				5DAC6B691EB3B52C00FD7467 /* User.m in Sources */,
 				5D7B1AE81EB2897B00FD9DEA /* LoginViewController.m in Sources */,
+				5D1EC5921EBC428400745F82 /* README.md in Sources */,
 				5D7630C21EB7D5F6006E7C2E /* CallProShopComponent.m in Sources */,
+				5D1EC5961EBC428400745F82 /* TLYShyNavBarManager.m in Sources */,
 				5D3711BC1EBB867E003B07E4 /* FOWeatherAPIRequest.m in Sources */,
 				5DFADCE11EB411C300B21870 /* CoursesCollectionView.m in Sources */,
 				5D828EFA1EB2E26100444027 /* FODAO.m in Sources */,
