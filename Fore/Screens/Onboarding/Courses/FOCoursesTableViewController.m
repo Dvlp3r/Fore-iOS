@@ -52,7 +52,7 @@
 
 -(void)createSearchBar;
 {
-    self.searchbar = [[SSSearchBar alloc] initWithFrame:CGRectMake(0, 0, [[self layoutManager] width:100], 44)];
+    self.searchbar = [[SSSearchBar alloc] initWithFrame:CGRectMake(0, 0, [[self layoutManager] width:100], 32)];
     self.searchbar.cancelButtonHidden = YES;
     self.searchbar.placeholder = @"Search...";
     self.searchbar.delegate = self;
@@ -62,10 +62,12 @@
     self.navigationItem.backBarButtonItem=nil;
     self.navigationItem.hidesBackButton=YES;
     
-    UIButton *backButton = [[UIButton alloc] initWithFrame: CGRectMake(0, 0, 70.0f, 21.0f)];
+    UIButton *backButton = [[UIButton alloc] initWithFrame: CGRectMake(10, 0, 40, 21)];
+//    backButton.layer.borderColor = [UIColor redColor].CGColor;
+//    backButton.layer.borderWidth = 1;
     UIImage *backImage = [UIImage imageNamed:@"Back_50"];
     [backButton setImage:backImage  forState:UIControlStateNormal];
-    [backButton setTitleEdgeInsets:UIEdgeInsetsMake(10.0, 10.0, 10.0, 0.0)];
+//    [backButton setTitleEdgeInsets:UIEdgeInsetsMake(10.0, 30.0, 10.0, 30.0)];
     [backButton setTitle:@"" forState:UIControlStateNormal];
     [backButton addTarget:self action:@selector(backButtonPressed) forControlEvents:UIControlEventTouchUpInside];
     backButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backButton];
@@ -93,7 +95,8 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     FOCourseTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"courseCell" forIndexPath:indexPath];
-    
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+
     [self configureCellTitle:cell withIndexPath:indexPath];
     
     return cell;
@@ -114,6 +117,11 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;
 {
     return [[self layoutManager] height:40];
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
+{
+//    [[self tableView] deselectRowAtIndexPath:indexPath animated:NO];
 }
 
 /*
@@ -160,11 +168,16 @@
 }
 */
 
-#pragma mark - Delegates
+#pragma mark - Actions
 
 -(void)filterIconButtonPressed;
 {
     [self performSegueWithIdentifier:@"gotoFilterScreen" sender:nil];
+}
+
+- (void)backButtonPressed;
+{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark - SSSearchbar Delegate
@@ -172,6 +185,7 @@
 -(void)searchBarSearchButtonClicked:(SSSearchBar *)searchBar;
 {
     [self.searchbar endEditing:YES];
+    searchBar.placeholder = @"Search...";
 }
 
 -(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView;
@@ -187,17 +201,15 @@
 - (void)searchBarTextDidEndEditing:(SSSearchBar *)searchBar
 {
     self.navigationItem.leftBarButtonItems = [NSArray arrayWithObjects:negativeSpacer,backButtonItem,nil];
+    searchBar.placeholder = @"Search...";
 }
 
 - (void)searchBarCancelButtonClicked:(SSSearchBar *)searchBar
 {
+    searchBar.placeholder = @"Search...";
     [searchBar resignFirstResponder];
     self.navigationItem.leftBarButtonItems = [NSArray arrayWithObjects:negativeSpacer,backButtonItem,nil];
 }
 
-- (void)backButtonPressed;
-{
-    [self.navigationController popViewControllerAnimated:YES];
-}
 
 @end

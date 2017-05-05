@@ -116,6 +116,10 @@
     {
         [_weatherIcon setFont:[UIFont fontWithName:@"Climacons-Font" size:60]];
     }
+    else if (IS_IPHONE_4_OR_LESS)
+    {
+        [_weatherIcon setFont:[UIFont fontWithName:@"Climacons-Font" size:30]];
+    }
     return _weatherIcon;
 }
 
@@ -137,6 +141,10 @@
     else if (IS_IPHONE_6)
     {
         [_dayInfoLabel setFont:[UIFont boldSystemFontOfSize:16]];
+    }
+    else if (IS_IPHONE_4_OR_LESS)
+    {
+        [_dayInfoLabel setFont:[UIFont systemFontOfSize:12]];
     }
     [_dayInfoLabel setTextColor:[UIColor darkGrayColor]];
     return _dayInfoLabel;
@@ -161,6 +169,10 @@
     {
         [_tempertatureInfoLabel setFont:[UIFont systemFontOfSize:16]];
     }
+    else if (IS_IPHONE_4_OR_LESS)
+    {
+        [_tempertatureInfoLabel setFont:[UIFont systemFontOfSize:10]];
+    }
     [_tempertatureInfoLabel setTextColor:[UIColor darkGrayColor]];
     return _tempertatureInfoLabel;
 }
@@ -183,6 +195,10 @@
     else if (IS_IPHONE_6)
     {
         [_speedInfoLabel setFont:[UIFont systemFontOfSize:15]];
+    }
+    else if (IS_IPHONE_4_OR_LESS)
+    {
+        [_speedInfoLabel setFont:[UIFont systemFontOfSize:9]];
     }
     [_speedInfoLabel setTextColor:[UIColor darkGrayColor]];
     return _speedInfoLabel;

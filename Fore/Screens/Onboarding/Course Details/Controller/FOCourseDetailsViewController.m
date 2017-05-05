@@ -12,7 +12,9 @@
 #import "SOLWeatherData.h"
 
 @interface FOCourseDetailsViewController ()<FOCourseDetailsViewDataSource,FOCourseDetailsViewDelegate>
-
+{
+    UIBarButtonItem *backButtonItem;
+}
 @property (nonatomic, strong) LayoutManager *layoutManager;
 
 @property(nonatomic, strong) UIButton *starButton;
@@ -56,12 +58,19 @@
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:rightBarButtonItems];
     
+    UIButton *backButton = [[UIButton alloc] initWithFrame: CGRectMake(0, 0, 20, 21)];
+    UIImage *backImage = [UIImage imageNamed:@"Back_50"];
+    [backButton setImage:backImage  forState:UIControlStateNormal];
+    [backButton setTitle:@"" forState:UIControlStateNormal];
+    [backButton addTarget:self action:@selector(backButtonPressed) forControlEvents:UIControlEventTouchUpInside];
+    backButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backButton];
     
+    self.navigationItem.leftBarButtonItems = [NSArray arrayWithObjects:backButtonItem,nil];
+
     [[FOWeatherAPIService sharedInstance] getWeatherInfo:nil withCompletion:^(NSError *error, id results) {
         NSLog(@"results:%@",results);
         [self updateWeatherViewWithData:results];
     }];
-    
 }
 
 - (void)updateWeatherViewWithData:(SOLWeatherData *)data
@@ -87,5 +96,10 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (void)backButtonPressed;
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
 
 @end

@@ -41,7 +41,7 @@
 
 -(void)createSearchBar;
 {
-    self.searchbar = [[SSSearchBar alloc] initWithFrame:CGRectMake(0, 0, [[self layoutManager] width:100], 44)];
+    self.searchbar = [[SSSearchBar alloc] initWithFrame:CGRectMake(0, 0, [[self layoutManager] width:100], 32)];
     self.searchbar.cancelButtonHidden = YES;
     self.searchbar.placeholder = @"Search...";
     self.searchbar.delegate = self;

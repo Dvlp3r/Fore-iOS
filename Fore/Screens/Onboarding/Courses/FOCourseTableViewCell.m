@@ -181,7 +181,10 @@
     {
         [_nameOfCourseLabel setFont:[UIFont boldSystemFontOfSize:15]];
     }
-
+    else if (IS_IPHONE_4_OR_LESS)
+    {
+        [_nameOfCourseLabel setFont:[UIFont systemFontOfSize:10]];
+    }
     return _nameOfCourseLabel;
 }
 
@@ -204,6 +207,10 @@
     else if (IS_IPHONE_6)
     {
         [_townLabel setFont:[UIFont systemFontOfSize:12]];
+    }
+    else if (IS_IPHONE_4_OR_LESS)
+    {
+        [_townLabel setFont:[UIFont systemFontOfSize:8]];
     }
     
     return _townLabel;
@@ -229,6 +236,10 @@
     {
         [_parLabel setFont:[UIFont systemFontOfSize:10]];
     }
+    else if (IS_IPHONE_4_OR_LESS)
+    {
+        [_parLabel setFont:[UIFont systemFontOfSize:7]];
+    }
     return _parLabel;
 }
 
@@ -251,6 +262,10 @@
     else if (IS_IPHONE_6)
     {
         [_slopeLabel setFont:[UIFont systemFontOfSize:10]];
+    }
+    else if (IS_IPHONE_4_OR_LESS)
+    {
+        [_slopeLabel setFont:[UIFont systemFontOfSize:7]];
     }
     return _slopeLabel;
 }

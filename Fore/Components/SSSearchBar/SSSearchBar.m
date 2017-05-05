@@ -142,7 +142,7 @@
         // TODO: Add fall-back code to set placeholder color.
     }
 
-//    self.textField.attr = placeholder;
+    self.textField.placeholder = placeholder;
 }
 
 - (UIFont *)font {
