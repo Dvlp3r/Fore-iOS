@@ -392,6 +392,9 @@
                             <outlet property="delegate" destination="q6y-0f-X76" id="5jn-a9-ZEI"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="tZy-VU-2f1" kind="show" identifier="gotoFilterScreen" id="r7s-QU-96Y"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xOO-uM-k5w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -432,6 +435,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y27-yY-vPg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5998" y="584"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="mOn-K4-WN9">
+            <objects>
+                <viewController id="tZy-VU-2f1" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iDU-Gc-Upe"/>
+                        <viewControllerLayoutGuide type="bottom" id="s6u-ai-mqd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cBu-Ej-3Hd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="48F-Fl-WGw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6908" y="583"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="3C2-hd-h0D">

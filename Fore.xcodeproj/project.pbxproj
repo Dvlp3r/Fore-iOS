@@ -25,6 +25,11 @@
 		5D3711CC1EBB960B003B07E4 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3711CA1EBB960B003B07E4 /* UIImage+ImageEffects.m */; };
 		5D3711CF1EBBB21F003B07E4 /* WeatherInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D3711CE1EBBB21F003B07E4 /* WeatherInfoView.m */; };
 		5D3711D41EBBDF94003B07E4 /* Climacons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5D3711D31EBBDF94003B07E4 /* Climacons.ttf */; };
+		5D70E9ED1EBC207300670A3C /* close-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D70E9E71EBC207300670A3C /* close-icon.png */; };
+		5D70E9EE1EBC207300670A3C /* close-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D70E9E81EBC207300670A3C /* close-icon@2x.png */; };
+		5D70E9EF1EBC207300670A3C /* search-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D70E9E91EBC207300670A3C /* search-icon.png */; };
+		5D70E9F01EBC207300670A3C /* search-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D70E9EA1EBC207300670A3C /* search-icon@2x.png */; };
+		5D70E9F11EBC207300670A3C /* SSSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D70E9EC1EBC207300670A3C /* SSSearchBar.m */; };
 		5D7630881EB7B4FB006E7C2E /* FOCourseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D7630871EB7B4FB006E7C2E /* FOCourseTableViewCell.m */; };
 		5D7630991EB7D0E9006E7C2E /* FOCourseDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D7630981EB7D0E9006E7C2E /* FOCourseDetailsViewController.m */; };
 		5D7630A61EB7D1AB006E7C2E /* HeaderVideoOverlayComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D76309C1EB7D1AB006E7C2E /* HeaderVideoOverlayComponent.m */; };
@@ -101,6 +106,14 @@
 		5D3711CE1EBBB21F003B07E4 /* WeatherInfoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherInfoView.m; sourceTree = "<group>"; };
 		5D3711D31EBBDF94003B07E4 /* Climacons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Climacons.ttf; sourceTree = "<group>"; };
 		5D6D98C01EB1978200D0F8E3 /* Fore_PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Fore_PrefixHeader.pch; sourceTree = "<group>"; };
+		5D70E9E21EBC1B7B00670A3C /* CustomTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTextField.h; sourceTree = "<group>"; };
+		5D70E9E31EBC1B7B00670A3C /* CustomTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTextField.m; sourceTree = "<group>"; };
+		5D70E9E71EBC207300670A3C /* close-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close-icon.png"; sourceTree = "<group>"; };
+		5D70E9E81EBC207300670A3C /* close-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close-icon@2x.png"; sourceTree = "<group>"; };
+		5D70E9E91EBC207300670A3C /* search-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search-icon.png"; sourceTree = "<group>"; };
+		5D70E9EA1EBC207300670A3C /* search-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search-icon@2x.png"; sourceTree = "<group>"; };
+		5D70E9EB1EBC207300670A3C /* SSSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSSearchBar.h; sourceTree = "<group>"; };
+		5D70E9EC1EBC207300670A3C /* SSSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSSearchBar.m; sourceTree = "<group>"; };
 		5D7630861EB7B4FB006E7C2E /* FOCourseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FOCourseTableViewCell.h; sourceTree = "<group>"; };
 		5D7630871EB7B4FB006E7C2E /* FOCourseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FOCourseTableViewCell.m; sourceTree = "<group>"; };
 		5D7630971EB7D0E9006E7C2E /* FOCourseDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FOCourseDetailsViewController.h; sourceTree = "<group>"; };
@@ -292,6 +305,27 @@
 			path = Categories;
 			sourceTree = "<group>";
 		};
+		5D70E9E51EBC207300670A3C /* SSSearchBar */ = {
+			isa = PBXGroup;
+			children = (
+				5D70E9E61EBC207300670A3C /* SearchBarIcons */,
+				5D70E9EB1EBC207300670A3C /* SSSearchBar.h */,
+				5D70E9EC1EBC207300670A3C /* SSSearchBar.m */,
+			);
+			path = SSSearchBar;
+			sourceTree = "<group>";
+		};
+		5D70E9E61EBC207300670A3C /* SearchBarIcons */ = {
+			isa = PBXGroup;
+			children = (
+				5D70E9E71EBC207300670A3C /* close-icon.png */,
+				5D70E9E81EBC207300670A3C /* close-icon@2x.png */,
+				5D70E9E91EBC207300670A3C /* search-icon.png */,
+				5D70E9EA1EBC207300670A3C /* search-icon@2x.png */,
+			);
+			path = SearchBarIcons;
+			sourceTree = "<group>";
+		};
 		5D7630891EB7CFCB006E7C2E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -392,6 +426,9 @@
 			children = (
 				5D7B1AD41EB2897B00FD9DEA /* LayoutManager.h */,
 				5D7B1AD51EB2897B00FD9DEA /* LayoutManager.m */,
+				5D70E9E21EBC1B7B00670A3C /* CustomTextField.h */,
+				5D70E9E31EBC1B7B00670A3C /* CustomTextField.m */,
+				5D70E9E51EBC207300670A3C /* SSSearchBar */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -741,8 +778,12 @@
 			files = (
 				5D271DCA1EB144E800186D15 /* LaunchScreen.storyboard in Resources */,
 				5D271DC71EB144E800186D15 /* Assets.xcassets in Resources */,
+				5D70E9EE1EBC207300670A3C /* close-icon@2x.png in Resources */,
+				5D70E9F01EBC207300670A3C /* search-icon@2x.png in Resources */,
 				5D3711D41EBBDF94003B07E4 /* Climacons.ttf in Resources */,
 				5D271DC51EB144E800186D15 /* Main.storyboard in Resources */,
+				5D70E9ED1EBC207300670A3C /* close-icon.png in Resources */,
+				5D70E9EF1EBC207300670A3C /* search-icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -814,6 +855,7 @@
 				5DFADCD71EB3F59200B21870 /* FOStateCollectionViewCell.m in Sources */,
 				5D7B1AE91EB2897B00FD9DEA /* SignUpViewController.m in Sources */,
 				5D828F161EB2EB8800444027 /* FOManagedObjectDeserializer.m in Sources */,
+				5D70E9F11EBC207300670A3C /* SSSearchBar.m in Sources */,
 				5D7630A61EB7D1AB006E7C2E /* HeaderVideoOverlayComponent.m in Sources */,
 				5DFADCC61EB3D97C00B21870 /* ProfileViewController.m in Sources */,
 				5D828EF51EB2DF8400444027 /* FOBaseRequest.m in Sources */,

@@ -9,11 +9,17 @@
 #import "FOCoursesTableViewController.h"
 #import "FOCourseTableViewCell.h"
 #import "LayoutManager.h"
+#import "SSSearchBar.h"
 
-@interface FOCoursesTableViewController ()<UISearchBarDelegate,UIScrollViewDelegate>
-
+@interface FOCoursesTableViewController ()<SSSearchBarDelegate,UIScrollViewDelegate>
+{
+    UIBarButtonItem *backButtonItem;
+    UIBarButtonItem *negativeSpacer;
+}
 @property (nonatomic, strong) LayoutManager *layoutManager;
-@property(nonatomic, strong) UISearchBar *searchbar;
+@property (nonatomic, strong) SSSearchBar *searchbar;
+@property (nonatomic, strong) UIButton *filterIconBtn;
+@property (nonatomic, strong) UIButton *backIconBtn;
 
 @end
 
@@ -32,17 +38,42 @@
     self.navigationController.navigationBar.backgroundColor = [UIColor clearColor];
     
     [self createSearchBar];
-}
+    
+    self.filterIconBtn =  [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.filterIconBtn setImage:[UIImage imageNamed:@"filter_image"] forState:UIControlStateNormal];
+    [self.filterIconBtn addTarget:self action:@selector(filterIconButtonPressed) forControlEvents:UIControlEventTouchUpInside];
+    [self.filterIconBtn setFrame:CGRectMake(44, 0, 32, 32)];
 
+    UIView *rightBarButtonItems = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 76, 32)];
+    [rightBarButtonItems addSubview:self.filterIconBtn];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:rightBarButtonItems];
+}
 
 -(void)createSearchBar;
 {
-    self.searchbar = [[UISearchBar alloc] init];
-    self.searchbar.showsCancelButton = NO;
+    self.searchbar = [[SSSearchBar alloc] initWithFrame:CGRectMake(0, 0, [[self layoutManager] width:100], 44)];
+    self.searchbar.cancelButtonHidden = YES;
     self.searchbar.placeholder = @"Search...";
     self.searchbar.delegate = self;
     
     self.navigationItem.titleView = self.searchbar;
+    
+    self.navigationItem.backBarButtonItem=nil;
+    self.navigationItem.hidesBackButton=YES;
+    
+    UIButton *backButton = [[UIButton alloc] initWithFrame: CGRectMake(0, 0, 70.0f, 21.0f)];
+    UIImage *backImage = [UIImage imageNamed:@"Back_50"];
+    [backButton setImage:backImage  forState:UIControlStateNormal];
+    [backButton setTitleEdgeInsets:UIEdgeInsetsMake(10.0, 10.0, 10.0, 0.0)];
+    [backButton setTitle:@"" forState:UIControlStateNormal];
+    [backButton addTarget:self action:@selector(backButtonPressed) forControlEvents:UIControlEventTouchUpInside];
+    backButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backButton];
+    
+    negativeSpacer = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
+    [negativeSpacer setWidth:-15];
+    
+    self.navigationItem.leftBarButtonItems = [NSArray arrayWithObjects:negativeSpacer,backButtonItem,nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -131,7 +162,14 @@
 
 #pragma mark - Delegates
 
--(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar;
+-(void)filterIconButtonPressed;
+{
+    [self performSegueWithIdentifier:@"gotoFilterScreen" sender:nil];
+}
+
+#pragma mark - SSSearchbar Delegate
+
+-(void)searchBarSearchButtonClicked:(SSSearchBar *)searchBar;
 {
     [self.searchbar endEditing:YES];
 }
@@ -139,6 +177,27 @@
 -(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView;
 {
     [self.searchbar endEditing:YES];
+}
+
+- (void)searchBarTextDidBeginEditing:(SSSearchBar *)searchBar
+{
+    self.navigationItem.leftBarButtonItems = nil;
+}
+
+- (void)searchBarTextDidEndEditing:(SSSearchBar *)searchBar
+{
+    self.navigationItem.leftBarButtonItems = [NSArray arrayWithObjects:negativeSpacer,backButtonItem,nil];
+}
+
+- (void)searchBarCancelButtonClicked:(SSSearchBar *)searchBar
+{
+    [searchBar resignFirstResponder];
+    self.navigationItem.leftBarButtonItems = [NSArray arrayWithObjects:negativeSpacer,backButtonItem,nil];
+}
+
+- (void)backButtonPressed;
+{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end
