@@ -10,6 +10,7 @@
 #import "FOCourseDetailsView.h"
 #import "LayoutManager.h"
 #import "SOLWeatherData.h"
+#import "TLYShyNavBarManager.h"
 
 @interface FOCourseDetailsViewController ()<FOCourseDetailsViewDataSource,FOCourseDetailsViewDelegate>
 {
@@ -33,8 +34,12 @@
 -(void)loadView
 {
     [super loadView];
+    
     self.layoutManager = [[LayoutManager alloc] init];
+    
     self.courseDetailsView = [[FOCourseDetailsView alloc] init];
+    self.courseDetailsView.contentSize = CGSizeMake([self.layoutManager width:100], 2000);
+    self.courseDetailsView.showsVerticalScrollIndicator = YES;
     self.courseDetailsView.dataSource = self;
     self.courseDetailsView.delegate = self;
     self.view = self.courseDetailsView;
@@ -67,10 +72,24 @@
     
     self.navigationItem.leftBarButtonItems = [NSArray arrayWithObjects:backButtonItem,nil];
 
-    [[FOWeatherAPIService sharedInstance] getWeatherInfo:nil withCompletion:^(NSError *error, id results) {
-        NSLog(@"results:%@",results);
-        [self updateWeatherViewWithData:results];
-    }];
+//    [[FOWeatherAPIService sharedInstance] getWeatherInfo:nil withCompletion:^(NSError *error, id results) {
+//        NSLog(@"results:%@",results);
+//        [self updateWeatherViewWithData:results];
+//    }];
+}
+
+-(void)viewWillAppear:(BOOL)animated;
+{
+//    UIView *navbar = self.navigationController.navigationBar;
+//    
+//    if (navbar) {
+//        if ([[self shyNavBarManager] scrollView]==nil) {
+//            [[self shyNavBarManager] setScrollView:[[self courseDetailsView] overViewComponent]];
+//            
+//            UIView *extensionView = [[self courseDetailsView] segmentedControl];
+//            [[self shyNavBarManager] setExtensionView:extensionView];
+//        }
+//    }
 }
 
 - (void)updateWeatherViewWithData:(SOLWeatherData *)data

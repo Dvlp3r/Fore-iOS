@@ -7,10 +7,13 @@
 //
 
 #import "OverviewVideoComponent.h"
+#import "GUIPlayerView.h"
 
-@interface OverviewVideoComponent ()
+@interface OverviewVideoComponent ()<GUIPlayerViewDelegate>
 
-@property (nonatomic, strong) UILabel *dummyLabel;
+@property (strong, nonatomic) GUIPlayerView *videoPlayerView;
+@property (nonatomic, assign) BOOL isPlaying;
+@property (nonatomic, assign) BOOL userRequestedPause;
 
 @end
 
@@ -20,47 +23,109 @@
 {
     self = [super initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseIdentifier];
     if (self) {
-        [self addSubviews];
-        [self setSelectionStyle:UITableViewCellSelectionStyleNone];
-        [self setBackgroundColor:[UIColor clearColor]];
+        [self setBackgroundColor:[UIColor whiteColor]];
+        self.isPlaying = NO;
+        self.userRequestedPause = NO;
+        [self addViews];
+        [self addGestures];
     }
     return self;
 }
 
--(void)prepareForReuse;
+-(void)addGestures;
 {
-    [super prepareForReuse];
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:[self videoPlayerView] action:@selector(didTap)];
+    [tapGesture setNumberOfTapsRequired:1];
+    [self addGestureRecognizer:tapGesture];
 }
 
--(void)addSubviews;
+-(void)prepareForReuse;
 {
-    [[self contentView] addSubview:[self dummyLabel]];
+    [self setIsPlaying:NO];
+    [self setUserRequestedPause:NO];
+}
+
+-(void)addViews;
+{
+    [self addSubview:[self videoPlayerView]];
+}
+
+-(void)didTap;
+{
+    self.userRequestedPause = !self.userRequestedPause;
+    if (self.isPlaying) {
+        [self pause];
+    }else{
+        [self play];
+    }
 }
 
 -(void)layoutSubviews;
 {
     [super layoutSubviews];
     
-    [[self dummyLabel] setFrame:CGRectMake(10, 0, CGRectGetWidth([[UIScreen mainScreen] bounds]), 70)];
-    [[self textLabel] sizeToFit];
+    CGFloat screenWidth = [[self contentView] frame].size.width;
+    CGFloat screenHeight = [[self contentView] frame].size.height;
+    
+    [[self videoPlayerView] setFrame:CGRectMake((screenWidth * 4)/100,
+                                                 0,
+                                                 (screenWidth * 92)/100,
+                                                 (screenHeight * 100)/100)];
 }
 
--(UILabel *)dummyLabel;
+-(void)setVideoURL:(NSURL *)videoURL
 {
-    if (_dummyLabel) {
-        return _dummyLabel;
+    NSURL *URL = [NSURL URLWithString:@"http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4"];
+    [self.videoPlayerView setVideoURL:URL];
+    [self.videoPlayerView prepareAndPlayAutomatically:YES];
+
+}
+
+-(void)play;
+{
+    NSURL *URL = [NSURL URLWithString:@"http://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4"];
+    [self.videoPlayerView setVideoURL:URL];
+    [self.videoPlayerView prepareAndPlayAutomatically:YES];
+}
+
+-(void)pause;
+{
+    [[self videoPlayerView] pause];
+}
+
+#pragma mark - Lazy Loading
+
+-(GUIPlayerView *)videoPlayerView;
+{
+    if (_videoPlayerView) {
+        return _videoPlayerView;
     }
     
-    _dummyLabel = [UILabel new];
-    [_dummyLabel setTextColor:[UIColor grayColor]];
-    [_dummyLabel setFont:[UIFont systemFontOfSize:14]];
+    _videoPlayerView = [[GUIPlayerView alloc] init];
+    [_videoPlayerView setDelegate:self];
     
-    return _dummyLabel;
+    return _videoPlayerView;
 }
 
--(void)setDummyName:(NSString *)townName;
-{
-    [[self dummyLabel] setText:townName];
+#pragma mark - GUI Player View Delegate Methods
+
+- (void)playerWillEnterFullscreen {
+//    [[self navigationController] setNavigationBarHidden:YES];
+//    [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationFade];
+}
+
+- (void)playerWillLeaveFullscreen {
+//    [[self navigationController] setNavigationBarHidden:NO];
+//    [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationFade];
+}
+
+- (void)playerDidEndPlaying {
+    [self.videoPlayerView clean];
+}
+
+- (void)playerFailedToPlayToEnd {
+    NSLog(@"Error: could not play video");
+    [self.videoPlayerView clean];
 }
 
 @end

@@ -11,7 +11,6 @@
 @interface OverviewVideoComponent : UITableViewCell
 
 @property (nonatomic, strong) UIImageView *mediaIcon;
-
 -(void)prepareForReuse;
 
 -(void)setVideoURL:(NSURL *)videoURL;

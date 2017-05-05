@@ -4,17 +4,43 @@
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            scope = "0"
+            stopOnStyle = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Fore/Screens/Onboarding/States/View/ExploreView.m"
-            timestampString = "515653306.274356"
+            filePath = "Fore/Screens/Onboarding/Course Details/View/FOCourseDetailsView.m"
+            timestampString = "515710402.523212"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "-addSubviews"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Fore/Screens/Onboarding/Course Details/View/FOCourseDetailsView.m"
+            timestampString = "515710403.790891"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
             landmarkName = "-updateConstraints"
             landmarkType = "7">
             <Locations>
@@ -22,31 +48,31 @@
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "-[ExploreView updateConstraints]"
+                  symbolName = "-[FOCourseDetailsView updateConstraints]"
                   moduleName = "Fore"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pavankrishna/Dvlper/Fore/Fore/Screens/Onboarding/States/View/ExploreView.m"
-                  timestampString = "515653133.927168"
+                  urlString = "file:///Users/pavankrishna/Dvlper/Fore/Fore/Screens/Onboarding/Course%20Details/View/FOCourseDetailsView.m"
+                  timestampString = "515710414.921932"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "47"
-                  endingLineNumber = "47"
-                  offsetFromSymbolStart = "29">
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "20">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "__32-[ExploreView updateConstraints]_block_invoke"
+                  symbolName = "__40-[FOCourseDetailsView updateConstraints]_block_invoke"
                   moduleName = "Fore"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pavankrishna/Dvlper/Fore/Fore/Screens/Onboarding/States/View/ExploreView.m"
-                  timestampString = "515653133.931502"
+                  urlString = "file:///Users/pavankrishna/Dvlper/Fore/Fore/Screens/Onboarding/Course%20Details/View/FOCourseDetailsView.m"
+                  timestampString = "515710414.925627"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "48"
-                  endingLineNumber = "48"
-                  offsetFromSymbolStart = "61">
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "19">
                </Location>
             </Locations>
          </BreakpointContent>

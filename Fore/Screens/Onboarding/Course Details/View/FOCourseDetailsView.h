@@ -23,7 +23,7 @@
 
 @end
 
-@interface FOCourseDetailsView : UIView<FOCourseDetailsViewDataSource,FOCourseDetailsViewDelegate>
+@interface FOCourseDetailsView : UIScrollView<FOCourseDetailsViewDataSource,FOCourseDetailsViewDelegate,UIScrollViewDelegate>
 
 @property (nonatomic, strong) NSMutableArray *statesArray;
 

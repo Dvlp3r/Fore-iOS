@@ -9,6 +9,7 @@
 #import "FOCourseDetailsView.h"
 #import "Masonry.h"
 #import "LayoutManager.h"
+#import "TLYShyNavBarManager.h"
 
 @interface FOCourseDetailsView()
 {
@@ -37,76 +38,76 @@
 -(void)addSubviews;
 {
     [self addSubview:[self headerVideoOverlayComponent]];
-    [self addSubview:[self segmentedControl]];
-    [self addSubview:[self overViewComponent]];
-    [self addSubview:[self holeByHoleComponent]];
-    [self addSubview:[self reviewsComponent]];
+//    [self addSubview:[self segmentedControl]];
+//    [self addSubview:[self overViewComponent]];
+//    [self addSubview:[self holeByHoleComponent]];
+//    [self addSubview:[self reviewsComponent]];
 }
 
 -(void)updateConstraints;
 {
     [[self headerVideoOverlayComponent] mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.mas_top).offset([self.layoutManager height:11]);
-        make.height.equalTo(@([self.layoutManager height:5]));
+        make.top.equalTo(self.mas_top).offset([self.layoutManager height:0]);
+        make.height.equalTo(@([self.layoutManager height:40]));
         make.left.equalTo(self).offset([self.layoutManager width:7]);
         make.right.equalTo(self).offset(-[self.layoutManager width:7]);
     }];
-    
-    [[self segmentedControl] mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.mas_top).offset([self.layoutManager height:11]);
-        make.height.equalTo(@([self.layoutManager height:5]));
-        make.left.equalTo(self).offset([self.layoutManager width:7]);
-        make.right.equalTo(self).offset(-[self.layoutManager width:7]);
-    }];
-    
-    [[self overViewComponent] mas_remakeConstraints:^(MASConstraintMaker *make) {
-        if (isOverviewSelected == YES) {
-            make.top.equalTo(self.segmentedControl.mas_bottom).offset([self.layoutManager height:1]);
-            make.height.equalTo(@([self.layoutManager height:79]));
-            make.left.equalTo(self).offset([self.layoutManager width:2]);
-            make.right.equalTo(self).offset(-[self.layoutManager width:2]);
-        }
-        else
-        {
-            make.top.equalTo(self.segmentedControl.mas_bottom).offset([self.layoutManager height:1]);
-            make.left.equalTo(self).offset([self.layoutManager width:2]);
-            make.width.equalTo(@([self.layoutManager width:0]));
-            make.height.equalTo(@([self.layoutManager height:0]));
-        }
-    }];
-    
-    [[self holeByHoleComponent] mas_remakeConstraints:^(MASConstraintMaker *make) {
-        if (isHolebyHoleSelected == YES) {
-            make.top.equalTo(self.segmentedControl.mas_bottom).offset([self.layoutManager height:1]);
-            make.height.equalTo(@([self.layoutManager height:79]));
-            make.left.equalTo(self).offset([self.layoutManager width:2]);
-            make.right.equalTo(self).offset(-[self.layoutManager width:2]);
-        }
-        else
-        {
-            make.top.equalTo(self.segmentedControl.mas_bottom).offset([self.layoutManager height:1]);
-            make.left.equalTo(self).offset([self.layoutManager width:2]);
-            make.width.equalTo(@([self.layoutManager width:0]));
-            make.height.equalTo(@([self.layoutManager height:0]));
-        }
-    }];
-    
-    [[self reviewsComponent] mas_remakeConstraints:^(MASConstraintMaker *make) {
-        if (isReviewsSelected == YES) {
-            make.top.equalTo(self.segmentedControl.mas_bottom).offset([self.layoutManager height:1]);
-            make.height.equalTo(@([self.layoutManager height:79]));
-            make.left.equalTo(self).offset([self.layoutManager width:2]);
-            make.right.equalTo(self).offset(-[self.layoutManager width:2]);
-        }
-        else
-        {
-            make.top.equalTo(self.segmentedControl.mas_bottom).offset([self.layoutManager height:1]);
-            make.left.equalTo(self).offset([self.layoutManager width:2]);
-            make.width.equalTo(@([self.layoutManager width:0]));
-            make.height.equalTo(@([self.layoutManager height:0]));
-        }
-    }];
-
+////
+////    [[self segmentedControl] mas_makeConstraints:^(MASConstraintMaker *make) {
+////        make.top.equalTo(self.headerVideoOverlayComponent.mas_bottom).offset([self.layoutManager height:1]);
+////        make.height.equalTo(@([self.layoutManager height:5]));
+////        make.left.equalTo(self).offset([self.layoutManager width:7]);
+////        make.right.equalTo(self).offset(-[self.layoutManager width:7]);
+////    }];
+////    
+////    [[self overViewComponent] mas_remakeConstraints:^(MASConstraintMaker *make) {
+////        if (isOverviewSelected == YES) {
+////            make.top.equalTo(self.segmentedControl.mas_bottom).offset([self.layoutManager height:1]);
+////            make.height.equalTo(@([self.layoutManager height:79]));
+////            make.left.equalTo(self).offset([self.layoutManager width:2]);
+////            make.right.equalTo(self).offset(-[self.layoutManager width:2]);
+////        }
+////        else
+////        {
+////            make.top.equalTo(self.segmentedControl.mas_bottom).offset([self.layoutManager height:1]);
+////            make.left.equalTo(self).offset([self.layoutManager width:2]);
+////            make.width.equalTo(@([self.layoutManager width:0]));
+////            make.height.equalTo(@([self.layoutManager height:0]));
+////        }
+////    }];
+////    
+////    [[self holeByHoleComponent] mas_remakeConstraints:^(MASConstraintMaker *make) {
+////        if (isHolebyHoleSelected == YES) {
+////            make.top.equalTo(self.segmentedControl.mas_bottom).offset([self.layoutManager height:1]);
+////            make.height.equalTo(@([self.layoutManager height:79]));
+////            make.left.equalTo(self).offset([self.layoutManager width:2]);
+////            make.right.equalTo(self).offset(-[self.layoutManager width:2]);
+////        }
+////        else
+////        {
+////            make.top.equalTo(self.segmentedControl.mas_bottom).offset([self.layoutManager height:1]);
+////            make.left.equalTo(self).offset([self.layoutManager width:2]);
+////            make.width.equalTo(@([self.layoutManager width:0]));
+////            make.height.equalTo(@([self.layoutManager height:0]));
+////        }
+////    }];
+////    
+////    [[self reviewsComponent] mas_remakeConstraints:^(MASConstraintMaker *make) {
+////        if (isReviewsSelected == YES) {
+////            make.top.equalTo(self.segmentedControl.mas_bottom).offset([self.layoutManager height:1]);
+////            make.height.equalTo(@([self.layoutManager height:79]));
+////            make.left.equalTo(self).offset([self.layoutManager width:2]);
+////            make.right.equalTo(self).offset(-[self.layoutManager width:2]);
+////        }
+////        else
+////        {
+////            make.top.equalTo(self.segmentedControl.mas_bottom).offset([self.layoutManager height:1]);
+////            make.left.equalTo(self).offset([self.layoutManager width:2]);
+////            make.width.equalTo(@([self.layoutManager width:0]));
+////            make.height.equalTo(@([self.layoutManager height:0]));
+////        }
+////    }];
+//
     [super updateConstraints];
 }
 
@@ -117,8 +118,8 @@
     }
     
     _headerVideoOverlayComponent = [HeaderVideoOverlayComponent new];
-//    [[_headerVideoOverlayComponent layer] setBorderColor:[UIColor redColor].CGColor];
-//    [[_headerVideoOverlayComponent layer] setBorderWidth:1];
+    [[_headerVideoOverlayComponent layer] setBorderColor:[UIColor redColor].CGColor];
+    [[_headerVideoOverlayComponent layer] setBorderWidth:1];
     return _headerVideoOverlayComponent;
 }
 

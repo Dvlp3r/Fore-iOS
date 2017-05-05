@@ -509,6 +509,26 @@
             </objects>
             <point key="canvasLocation" x="5000.625" y="-208.09859154929578"/>
         </scene>
+        <!--Header View Controller-->
+        <scene sceneID="v3G-zB-9bZ">
+            <objects>
+                <viewController storyboardIdentifier="HeaderViewController1" id="WrA-N7-dIP" customClass="HeaderViewController" customModule="Fore" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="of9-fX-5c7"/>
+                        <viewControllerLayoutGuide type="bottom" id="EAf-ZV-Wt7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3Wh-eB-P8E">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="200"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ypn-Ec-Uhc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7798" y="388"/>
+        </scene>
     </scenes>
     <resources>
         <image name="home_img" width="286" height="198"/>

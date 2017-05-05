@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '9993155663D6DE75142DD203E2F484A5'
+               BlueprintIdentifier = '6982F62021477B0F41C6BD0E759DB85A'
                BlueprintName = 'RSFloatInputView'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'RSFloatInputView.framework'>

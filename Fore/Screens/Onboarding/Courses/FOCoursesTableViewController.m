@@ -10,6 +10,8 @@
 #import "FOCourseTableViewCell.h"
 #import "LayoutManager.h"
 #import "SSSearchBar.h"
+#import <SJSegmentedScrollView/SJSegmentedScrollView-Swift.h>
+#import "HeaderVideoOverlayComponent.h"
 
 @interface FOCoursesTableViewController ()<SSSearchBarDelegate,UIScrollViewDelegate>
 {
@@ -129,7 +131,19 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
 {
-//    [[self tableView] deselectRowAtIndexPath:indexPath animated:NO];
+
+//    let segmentController = SJSegmentedViewController()
+//    segmentController.headerViewController = headerViewController
+//    segmentController.segmentControllers = [firstViewController,
+//                                            secondViewController]
+//    segmentController.headerViewHeight = 200.0
+//    navigationController?.pushViewController(segmentController, animated: true)
+
+
+    
+    
+//    SJSegmentedViewController *segmentController = [[SJSegmentedViewController alloc] initWithHeaderViewController:<#(UIViewController * _Nullable)#> segmentControllers:<#(NSArray<UIViewController *> * _Nonnull)#>]
+//    
 }
 
 /*
