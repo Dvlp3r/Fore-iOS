@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HoleByHoleComponent : UIView<UITableViewDataSource,UITableViewDelegate>
+@interface HoleByHoleComponent : UIViewController<UITableViewDataSource,UITableViewDelegate>
 
 @end

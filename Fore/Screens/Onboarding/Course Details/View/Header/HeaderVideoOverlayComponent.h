@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HeaderVideoOverlayComponent : UIView
+@interface HeaderVideoOverlayComponent : UIViewController
 
 @end

@@ -9,8 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "SOLWeatherData.h"
 
-@interface OverViewComponent : UIView<UITableViewDataSource,UITableViewDelegate>
+@interface OverViewComponent : UIViewController<UITableViewDataSource,UITableViewDelegate>
 
-- (void)updateWeatherViewWithData:(SOLWeatherData *)data;
+@property (nonatomic, strong) SOLWeatherData *weatherModel;
+
+//- (void)updateWeatherViewWithData:(SOLWeatherData *)data;
 
 @end

@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "TLYShyNavBarManager.h"
+#import "SOLWeatherData.h"
 
 @interface FOCoursesTableViewController : UITableViewController
+
+@property (nonatomic, strong) SOLWeatherData *weatherModelData;
 
 @end

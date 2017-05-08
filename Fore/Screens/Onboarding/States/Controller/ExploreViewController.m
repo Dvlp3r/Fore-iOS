@@ -11,6 +11,9 @@
 #import "FOCourseCollectionViewCell.h"
 #import "ExploreView.h"
 #import "SSSearchBar.h"
+#import "FOWeatherAPIService.h"
+#import "SOLWeatherData.h"
+#import "FOCoursesTableViewController.h"
 
 @interface ExploreViewController ()<SSSearchBarDelegate,UIScrollViewDelegate,ExploreViewDataSource,ExploreViewDelegate>
 
@@ -19,6 +22,8 @@
 @property (nonatomic, strong) SSSearchBar *searchbar;
 @property (nonatomic, strong) NSMutableArray *statesArray;
 @property (nonatomic, strong) ExploreView *exploreView;
+
+@property (nonatomic, strong) SOLWeatherData *weatherModelData;
 
 @end
 
@@ -78,7 +83,26 @@
     [rightBarButtonItems addSubview:self.profileIconBtn];
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:rightBarButtonItems];
+    [self getWeatherData];
+}
 
+-(void)getWeatherData;
+{
+    __weak typeof(self) weakSelf = self;
+    
+    [[FOWeatherAPIService sharedInstance] getWeatherInfo:nil withCompletion:^(NSError *error, id results) {
+        
+        
+        if (results != nil) {
+            NSLog(@"results:%@",results);
+            weakSelf.weatherModelData = results;
+            NSLog(@"self.weatherModelData:%@",weakSelf.weatherModelData);
+        }
+        else
+        {
+            
+        }
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -133,6 +157,17 @@
 -(void)gotoCoursesScreen:(NSInteger)userID;
 {
     [self performSegueWithIdentifier:@"gotoCoursesScreen" sender:nil];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender;
+{
+    
+    NSLog(@"self.weatherModelData:%@",self.weatherModelData);
+    
+    if ([[segue identifier] isEqualToString:@"gotoCoursesScreen"]) {
+        FOCoursesTableViewController *controller = segue.destinationViewController;
+        controller.weatherModelData = self.weatherModelData;
+    }
 }
 
 @end

@@ -43,6 +43,7 @@
 		5D43B5481EBD069000A95221 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D43B5421EBD069000A95221 /* MobileCoreServices.framework */; };
 		5D43B54B1EBD20C200A95221 /* CourseListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D43B54A1EBD20C200A95221 /* CourseListTableViewController.m */; };
 		5D43B54E1EBD33C700A95221 /* HeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D43B54D1EBD33C700A95221 /* HeaderViewController.swift */; };
+		5D43B5511EBD3F6200A95221 /* HeaderVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D43B5501EBD3F6200A95221 /* HeaderVideoView.m */; };
 		5D70E9ED1EBC207300670A3C /* close-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D70E9E71EBC207300670A3C /* close-icon.png */; };
 		5D70E9EE1EBC207300670A3C /* close-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D70E9E81EBC207300670A3C /* close-icon@2x.png */; };
 		5D70E9EF1EBC207300670A3C /* search-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D70E9E91EBC207300670A3C /* search-icon.png */; };
@@ -149,6 +150,8 @@
 		5D43B54A1EBD20C200A95221 /* CourseListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CourseListTableViewController.m; sourceTree = "<group>"; };
 		5D43B54C1EBD33C600A95221 /* Fore-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Fore-Bridging-Header.h"; sourceTree = "<group>"; };
 		5D43B54D1EBD33C700A95221 /* HeaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderViewController.swift; sourceTree = "<group>"; };
+		5D43B54F1EBD3F6200A95221 /* HeaderVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderVideoView.h; sourceTree = "<group>"; };
+		5D43B5501EBD3F6200A95221 /* HeaderVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderVideoView.m; sourceTree = "<group>"; };
 		5D6D98C01EB1978200D0F8E3 /* Fore_PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Fore_PrefixHeader.pch; sourceTree = "<group>"; };
 		5D70E9E71EBC207300670A3C /* close-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close-icon.png"; sourceTree = "<group>"; };
 		5D70E9E81EBC207300670A3C /* close-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close-icon@2x.png"; sourceTree = "<group>"; };
@@ -452,6 +455,8 @@
 			children = (
 				5D76309B1EB7D1AB006E7C2E /* HeaderVideoOverlayComponent.h */,
 				5D76309C1EB7D1AB006E7C2E /* HeaderVideoOverlayComponent.m */,
+				5D43B54F1EBD3F6200A95221 /* HeaderVideoView.h */,
+				5D43B5501EBD3F6200A95221 /* HeaderVideoView.m */,
 			);
 			path = Header;
 			sourceTree = "<group>";
@@ -996,6 +1001,7 @@
 				5D7630C21EB7D5F6006E7C2E /* CallProShopComponent.m in Sources */,
 				5D1EC5961EBC428400745F82 /* TLYShyNavBarManager.m in Sources */,
 				5D43B54B1EBD20C200A95221 /* CourseListTableViewController.m in Sources */,
+				5D43B5511EBD3F6200A95221 /* HeaderVideoView.m in Sources */,
 				5D3711BC1EBB867E003B07E4 /* FOWeatherAPIRequest.m in Sources */,
 				5DFADCE11EB411C300B21870 /* CoursesCollectionView.m in Sources */,
 				5D828EFA1EB2E26100444027 /* FODAO.m in Sources */,
@@ -1120,7 +1126,7 @@
 			baseConfigurationReference = A5AB7FAB8494685F1EE6A798 /* Pods-Fore.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1152,7 +1158,7 @@
 			baseConfigurationReference = B1E188FA1FFACB3270128B47 /* Pods-Fore.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;

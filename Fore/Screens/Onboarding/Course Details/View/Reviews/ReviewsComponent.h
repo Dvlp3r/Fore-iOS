@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ReviewsComponent : UIView<UITableViewDataSource,UITableViewDelegate>
+@interface ReviewsComponent : UIViewController<UITableViewDataSource,UITableViewDelegate>
 
 @end

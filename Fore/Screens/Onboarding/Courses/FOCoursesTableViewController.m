@@ -12,6 +12,10 @@
 #import "SSSearchBar.h"
 #import <SJSegmentedScrollView/SJSegmentedScrollView-Swift.h>
 #import "HeaderVideoOverlayComponent.h"
+#import "OverViewComponent.h"
+#import "HoleByHoleComponent.h"
+#import "ReviewsComponent.h"
+#import "FOWeatherAPIService.h"
 
 @interface FOCoursesTableViewController ()<SSSearchBarDelegate,UIScrollViewDelegate>
 {
@@ -23,12 +27,18 @@
 @property (nonatomic, strong) UIButton *filterIconBtn;
 @property (nonatomic, strong) UIButton *backIconBtn;
 
+@property(nonatomic, strong) UIButton *starButton;
+@property(nonatomic, strong) UIButton *shareButton;
+
+
 @end
 
 @implementation FOCoursesTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+//    [self getWeatherData];
     // Do any additional setup after loading the view.
     self.layoutManager = [[LayoutManager alloc] init];
 //    [self showTransparentNaviagtionBar];
@@ -129,21 +139,67 @@
     return [[self layoutManager] height:40];
 }
 
+-(void)getWeatherData;
+{
+    __weak typeof(self) weakSelf = self;
+    
+    [[FOWeatherAPIService sharedInstance] getWeatherInfo:nil withCompletion:^(NSError *error, id results) {
+        if (results != nil) {
+            NSLog(@"results:%@",results);
+            weakSelf.weatherModelData = results;
+            NSLog(@"self.weatherModelData:%@",weakSelf.weatherModelData);
+        }
+        else
+        {
+            
+        }
+    }];
+}
+
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
 {
-
-//    let segmentController = SJSegmentedViewController()
-//    segmentController.headerViewController = headerViewController
-//    segmentController.segmentControllers = [firstViewController,
-//                                            secondViewController]
-//    segmentController.headerViewHeight = 200.0
-//    navigationController?.pushViewController(segmentController, animated: true)
-
-
+//    [self getWeatherData];
+    HeaderVideoOverlayComponent *headerVideoOverlayComponent = [[HeaderVideoOverlayComponent alloc] init];
     
+    OverViewComponent *overViewController = [[OverViewComponent alloc] init];
+    overViewController.title = @"Overview";
+    NSLog(@"_weatherModel:%@",self.weatherModelData);
+
+    [overViewController setWeatherModel:self.weatherModelData];
+
+    HoleByHoleComponent *holeByHoleComponentViewController = [[HoleByHoleComponent alloc] init];
+    holeByHoleComponentViewController.title = @"Hole-by-hole";
     
-//    SJSegmentedViewController *segmentController = [[SJSegmentedViewController alloc] initWithHeaderViewController:<#(UIViewController * _Nullable)#> segmentControllers:<#(NSArray<UIViewController *> * _Nonnull)#>]
-//    
+    ReviewsComponent *reviewsComponentController = [[ReviewsComponent alloc] init];
+    reviewsComponentController.title = @"Reviews";
+    
+    NSArray *viewcontrollers = [NSArray arrayWithObjects:overViewController,holeByHoleComponentViewController,reviewsComponentController, nil];
+    
+    SJSegmentedViewController *segmentController = [[SJSegmentedViewController alloc] initWithHeaderViewController:headerVideoOverlayComponent segmentControllers:viewcontrollers];
+    
+    [segmentController.navigationController.navigationBar setBackgroundImage:[UIImage new]
+                                                  forBarMetrics:UIBarMetricsDefault];
+    segmentController.navigationController.navigationBar.shadowImage = [UIImage new];
+    segmentController.navigationController.navigationBar.translucent = YES;
+    segmentController.navigationController.view.backgroundColor = [UIColor clearColor];
+    segmentController.navigationController.navigationBar.backgroundColor = [UIColor clearColor];
+
+    UIView *rightBarButtonItems = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 76, 32)];
+    [rightBarButtonItems addSubview:self.starButton];
+    
+    segmentController.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:rightBarButtonItems];
+    
+    UIButton *backButton = [[UIButton alloc] initWithFrame: CGRectMake(0, 0, 20, 21)];
+    UIImage *backImage = [UIImage imageNamed:@"Back_50"];
+    [backButton setImage:backImage  forState:UIControlStateNormal];
+    [backButton setTitle:@"" forState:UIControlStateNormal];
+    [backButton addTarget:self action:@selector(backButtonPressed) forControlEvents:UIControlEventTouchUpInside];
+    backButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backButton];
+    
+    segmentController.navigationItem.leftBarButtonItems = [NSArray arrayWithObjects:backButtonItem,nil];
+    
+    segmentController.headerViewHeight = 150;
+    [[self navigationController] pushViewController:segmentController animated:YES];
 }
 
 /*

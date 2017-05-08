@@ -18,35 +18,47 @@
 
 @implementation ReviewsComponent
 
+-(void)viewDidLoad;
+{
+    [super viewDidLoad];
+    self.layoutManager = [[LayoutManager alloc] init];
+    self.view.backgroundColor = [UIColor whiteColor];
+    [self addSubviews];
+    [self updateConstraints];
+
+    [[self reviewsTableView] registerClass:[ReviewsTableViewCell class] forCellReuseIdentifier:@"reviewsTableViewCellIdentifier"];
+    
+}
+
 - (instancetype)init
 {
     self = [super init];
     if (self) {
         
-        self.layoutManager = [[LayoutManager alloc] init];
-        self.backgroundColor = [UIColor whiteColor];
-        [self addSubviews];
-        
-        [[self reviewsTableView] registerClass:[ReviewsTableViewCell class] forCellReuseIdentifier:@"reviewsTableViewCellIdentifier"];
+//        self.layoutManager = [[LayoutManager alloc] init];
+//        self.backgroundColor = [UIColor whiteColor];
+//        [self addSubviews];
+//        
+//        [[self reviewsTableView] registerClass:[ReviewsTableViewCell class] forCellReuseIdentifier:@"reviewsTableViewCellIdentifier"];
     }
     return self;
 }
 
 -(void)addSubviews;
 {
-    [self addSubview:[self reviewsTableView]];
+    [[self view] addSubview:[self reviewsTableView]];
 }
 
 -(void)updateConstraints;
 {
     [[self reviewsTableView] mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.mas_top);
+        make.top.equalTo(self.view.mas_top);
         make.height.equalTo(@([self.layoutManager height:75]));
-        make.left.equalTo(self);
-        make.right.equalTo(self);
+        make.left.equalTo(self.view);
+        make.right.equalTo(self.view);
     }];
     
-    [super updateConstraints];
+//    [super updateConstraints];
 }
 
 #pragma mark - Table view data source

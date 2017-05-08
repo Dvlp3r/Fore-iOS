@@ -37,7 +37,7 @@
 
 -(void)addSubviews;
 {
-    [self addSubview:[self headerVideoOverlayComponent]];
+//    [self addSubview:[self headerVideoOverlayComponent]];
 //    [self addSubview:[self segmentedControl]];
 //    [self addSubview:[self overViewComponent]];
 //    [self addSubview:[self holeByHoleComponent]];
@@ -46,12 +46,12 @@
 
 -(void)updateConstraints;
 {
-    [[self headerVideoOverlayComponent] mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.mas_top).offset([self.layoutManager height:0]);
-        make.height.equalTo(@([self.layoutManager height:40]));
-        make.left.equalTo(self).offset([self.layoutManager width:7]);
-        make.right.equalTo(self).offset(-[self.layoutManager width:7]);
-    }];
+//    [[self headerVideoOverlayComponent] mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.top.equalTo(self.mas_top).offset([self.layoutManager height:0]);
+//        make.height.equalTo(@([self.layoutManager height:40]));
+//        make.left.equalTo(self).offset([self.layoutManager width:7]);
+//        make.right.equalTo(self).offset(-[self.layoutManager width:7]);
+//    }];
 ////
 ////    [[self segmentedControl] mas_makeConstraints:^(MASConstraintMaker *make) {
 ////        make.top.equalTo(self.headerVideoOverlayComponent.mas_bottom).offset([self.layoutManager height:1]);
@@ -111,70 +111,70 @@
     [super updateConstraints];
 }
 
--(HeaderVideoOverlayComponent *)headerVideoOverlayComponent;
-{
-    if (_headerVideoOverlayComponent) {
-        return _headerVideoOverlayComponent;
-    }
-    
-    _headerVideoOverlayComponent = [HeaderVideoOverlayComponent new];
-    [[_headerVideoOverlayComponent layer] setBorderColor:[UIColor redColor].CGColor];
-    [[_headerVideoOverlayComponent layer] setBorderWidth:1];
-    return _headerVideoOverlayComponent;
-}
-
--(UISegmentedControl *)segmentedControl;
-{
-    if (_segmentedControl) {
-        return _segmentedControl;
-    }
-    
-    NSArray *titles = [[NSArray alloc] initWithObjects:@"OverView",@"Hole-by-hole",@"Reviews", nil];
-
-    _segmentedControl = [[UISegmentedControl alloc] initWithItems:titles];
-    
-    [_segmentedControl setFrame:CGRectZero];
-    [_segmentedControl setSelectedSegmentIndex:0];
-    [_segmentedControl addTarget:self action:@selector(segmentChanged:) forControlEvents:UIControlEventValueChanged];
-    
-    return _segmentedControl;
-}
-
--(OverViewComponent *)overViewComponent;
-{
-    if (_overViewComponent) {
-        return _overViewComponent;
-    }
-    
-    _overViewComponent = [OverViewComponent new];
-//    [[_overViewComponent layer] setBorderColor:[UIColor redColor].CGColor];
-//    [[_overViewComponent layer] setBorderWidth:1];
-    return _overViewComponent;
-}
-
--(HoleByHoleComponent *)holeByHoleComponent;
-{
-    if (_holeByHoleComponent) {
-        return _holeByHoleComponent;
-    }
-    
-    _holeByHoleComponent = [HoleByHoleComponent new];
-    //    [[_holeByHoleComponent layer] setBorderColor:[UIColor redColor].CGColor];
-    //    [[_holeByHoleComponent layer] setBorderWidth:1];
-    return _holeByHoleComponent;
-}
-
--(ReviewsComponent *)reviewsComponent;
-{
-    if (_reviewsComponent) {
-        return _reviewsComponent;
-    }
-    
-    _reviewsComponent = [ReviewsComponent new];
-    //    [[_reviewsComponent layer] setBorderColor:[UIColor redColor].CGColor];
-    //    [[_reviewsComponent layer] setBorderWidth:1];
-    return _reviewsComponent;
-}
+//-(HeaderVideoOverlayComponent *)headerVideoOverlayComponent;
+//{
+//    if (_headerVideoOverlayComponent) {
+//        return _headerVideoOverlayComponent;
+//    }
+//    
+//    _headerVideoOverlayComponent = [HeaderVideoOverlayComponent new];
+//    [[_headerVideoOverlayComponent layer] setBorderColor:[UIColor redColor].CGColor];
+//    [[_headerVideoOverlayComponent layer] setBorderWidth:1];
+//    return _headerVideoOverlayComponent;
+//}
+//
+//-(UISegmentedControl *)segmentedControl;
+//{
+//    if (_segmentedControl) {
+//        return _segmentedControl;
+//    }
+//    
+//    NSArray *titles = [[NSArray alloc] initWithObjects:@"OverView",@"Hole-by-hole",@"Reviews", nil];
+//
+//    _segmentedControl = [[UISegmentedControl alloc] initWithItems:titles];
+//    
+//    [_segmentedControl setFrame:CGRectZero];
+//    [_segmentedControl setSelectedSegmentIndex:0];
+//    [_segmentedControl addTarget:self action:@selector(segmentChanged:) forControlEvents:UIControlEventValueChanged];
+//    
+//    return _segmentedControl;
+//}
+//
+//-(OverViewComponent *)overViewComponent;
+//{
+//    if (_overViewComponent) {
+//        return _overViewComponent;
+//    }
+//    
+//    _overViewComponent = [OverViewComponent new];
+////    [[_overViewComponent layer] setBorderColor:[UIColor redColor].CGColor];
+////    [[_overViewComponent layer] setBorderWidth:1];
+//    return _overViewComponent;
+//}
+//
+//-(HoleByHoleComponent *)holeByHoleComponent;
+//{
+//    if (_holeByHoleComponent) {
+//        return _holeByHoleComponent;
+//    }
+//    
+//    _holeByHoleComponent = [HoleByHoleComponent new];
+//    //    [[_holeByHoleComponent layer] setBorderColor:[UIColor redColor].CGColor];
+//    //    [[_holeByHoleComponent layer] setBorderWidth:1];
+//    return _holeByHoleComponent;
+//}
+//
+//-(ReviewsComponent *)reviewsComponent;
+//{
+//    if (_reviewsComponent) {
+//        return _reviewsComponent;
+//    }
+//    
+//    _reviewsComponent = [ReviewsComponent new];
+//    //    [[_reviewsComponent layer] setBorderColor:[UIColor redColor].CGColor];
+//    //    [[_reviewsComponent layer] setBorderWidth:1];
+//    return _reviewsComponent;
+//}
 
 - (void)segmentChanged:(UISegmentedControl *)sender
 {
@@ -210,6 +210,6 @@
 
 - (void)updateWeatherViewWithData:(SOLWeatherData *)data;
 {
-    [[self overViewComponent] updateWeatherViewWithData:data];
+//    [[self overViewComponent] updateWeatherViewWithData:data];
 }
 @end

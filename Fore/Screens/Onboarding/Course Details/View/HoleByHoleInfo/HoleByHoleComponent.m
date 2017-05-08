@@ -17,35 +17,46 @@
 
 @implementation HoleByHoleComponent
 
+-(void)viewDidLoad;
+{
+    [super viewDidLoad];
+    self.layoutManager = [[LayoutManager alloc] init];
+    self.view.backgroundColor = [UIColor lightGrayColor];
+    [self addSubviews];
+    [self updateConstraints];
+    [[self holeByHoleTableView] registerClass:[HoleByHoleTableViewCell class] forCellReuseIdentifier:@"holeByHoleTableViewCellIdentifier"];
+
+}
+
 - (instancetype)init
 {
     self = [super init];
     if (self) {
         
-        self.layoutManager = [[LayoutManager alloc] init];
-        self.backgroundColor = [UIColor whiteColor];
-        [self addSubviews];
-        
-        [[self holeByHoleTableView] registerClass:[HoleByHoleTableViewCell class] forCellReuseIdentifier:@"holeByHoleTableViewCellIdentifier"];
+//        self.layoutManager = [[LayoutManager alloc] init];
+//        self.backgroundColor = [UIColor whiteColor];
+//        [self addSubviews];
+//        
+//        [[self holeByHoleTableView] registerClass:[HoleByHoleTableViewCell class] forCellReuseIdentifier:@"holeByHoleTableViewCellIdentifier"];
     }
     return self;
 }
 
 -(void)addSubviews;
 {
-    [self addSubview:[self holeByHoleTableView]];
+    [[self view] addSubview:[self holeByHoleTableView]];
 }
 
 -(void)updateConstraints;
 {
     [[self holeByHoleTableView] mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.mas_top);
+        make.top.equalTo(self.view.mas_top);
         make.height.equalTo(@([self.layoutManager height:75]));
-        make.left.equalTo(self);
-        make.right.equalTo(self);
+        make.left.equalTo(self.view);
+        make.right.equalTo(self.view);
     }];
     
-    [super updateConstraints];
+//    [super updateConstraints];
 }
 
 #pragma mark - Table view data source
@@ -92,8 +103,8 @@
     }
     
     _holeByHoleTableView = [UITableView new];
-    //    [[_holeByHoleTableView layer] setBorderColor:[UIColor brownColor].CGColor];
-    //    [[_holeByHoleTableView layer] setBorderWidth:1];
+//        [[_holeByHoleTableView layer] setBorderColor:[UIColor brownColor].CGColor];
+//        [[_holeByHoleTableView layer] setBorderWidth:1];
     [_holeByHoleTableView setDataSource:self];
     [_holeByHoleTableView setDelegate:self];
     [_holeByHoleTableView setSeparatorStyle:UITableViewCellSeparatorStyleSingleLine];

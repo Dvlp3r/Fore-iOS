@@ -7,15 +7,53 @@
 //
 
 #import "HeaderVideoOverlayComponent.h"
+#import "HeaderVideoView.h"
 
+@interface HeaderVideoOverlayComponent()
+
+@property (nonatomic, strong) LayoutManager *layoutManager;
+@property (strong, nonatomic) HeaderVideoView *headerVideoView;
+
+@end
 @implementation HeaderVideoOverlayComponent
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+-(void)viewDidLoad;
+{
+    [super viewDidLoad];
+    self.layoutManager = [[LayoutManager alloc] init];
+    self.view.backgroundColor = [UIColor whiteColor];
+    [self addSubviews];
+    [self updateConstraints];
 }
-*/
 
+-(void)addSubviews;
+{
+//    [self.view addSubview:[self headerVideoView]];
+}
+
+-(void)updateConstraints;
+{
+//    [[self headerVideoView] mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.top.equalTo(self.view.mas_top);
+//        make.height.equalTo(@(150));
+//        make.left.equalTo(self.view);
+//        make.right.equalTo(self.view);
+//    }];
+}
+
+#pragma mark - Lazy Loading
+
+-(HeaderVideoView *)headerVideoView;
+{
+    if (_headerVideoView) {
+        return _headerVideoView;
+    }
+    
+    _headerVideoView = [[HeaderVideoView alloc] initWithFrame:CGRectZero];
+//    [[_headerVideoView layer] setBorderColor:[UIColor brownColor].CGColor];
+//    [[_headerVideoView layer] setBorderWidth:1];
+    [_headerVideoView setBackgroundColor:[UIColor clearColor]];
+    
+    return _headerVideoView;
+}
 @end

@@ -16,53 +16,51 @@
 #import "OverviewVideoComponent.h"
 #import "CallProShopComponent.h"
 #import "SOLWeatherData.h"
+#import "FOWeatherAPIService.h"
 
 @interface OverViewComponent()
 
 @property (nonatomic, strong) LayoutManager *layoutManager;
 @property (nonatomic, strong) UITableView *overViewTableView;
-@property (nonatomic, strong) SOLWeatherData *weatherModel;
 @property (strong, nonatomic) NSDateFormatter *dateFormatter;
 
 @end
 
 @implementation OverViewComponent
 
-- (instancetype)init
+-(void)viewDidLoad;
 {
-    self = [super init];
-    if (self) {
-        
-        self.layoutManager = [[LayoutManager alloc] init];
-        self.backgroundColor = [UIColor whiteColor];
-        [self addSubviews];
-        
-        [[self overViewTableView] registerClass:[ParInfoComponent class] forCellReuseIdentifier:@"parInfoCellIdentifier"];
-        [[self overViewTableView] registerClass:[CourseInfoComponent class] forCellReuseIdentifier:@"courseInfoCellIdentifier"];
-        [[self overViewTableView] registerClass:[AmenitiesComponent class] forCellReuseIdentifier:@"amenitiesCellIdentifier"];
-        [[self overViewTableView] registerClass:[MapInfoComponent class] forCellReuseIdentifier:@"mapInfoCellIdentifier"];
-        [[self overViewTableView] registerClass:[WeatherInfoComponent class] forCellReuseIdentifier:@"weatherInfoCellIdentifier"];
-        [[self overViewTableView] registerClass:[OverviewVideoComponent class] forCellReuseIdentifier:@"overviewVideoCellIdentifier"];
-        [[self overViewTableView] registerClass:[CallProShopComponent class] forCellReuseIdentifier:@"callProShopCellIdentifier"];
-    }
-    return self;
+    [super viewDidLoad];
+    
+    NSLog(@"_weatherModel:%@",_weatherModel);
+    
+    self.layoutManager = [[LayoutManager alloc] init];
+    self.view.backgroundColor = [UIColor whiteColor];
+    [self addSubviews];
+    [self updateConstraints];
+
+    [[self overViewTableView] registerClass:[ParInfoComponent class] forCellReuseIdentifier:@"parInfoCellIdentifier"];
+    [[self overViewTableView] registerClass:[CourseInfoComponent class] forCellReuseIdentifier:@"courseInfoCellIdentifier"];
+    [[self overViewTableView] registerClass:[AmenitiesComponent class] forCellReuseIdentifier:@"amenitiesCellIdentifier"];
+    [[self overViewTableView] registerClass:[MapInfoComponent class] forCellReuseIdentifier:@"mapInfoCellIdentifier"];
+    [[self overViewTableView] registerClass:[WeatherInfoComponent class] forCellReuseIdentifier:@"weatherInfoCellIdentifier"];
+    [[self overViewTableView] registerClass:[OverviewVideoComponent class] forCellReuseIdentifier:@"overviewVideoCellIdentifier"];
+    [[self overViewTableView] registerClass:[CallProShopComponent class] forCellReuseIdentifier:@"callProShopCellIdentifier"];
 }
 
 -(void)addSubviews;
 {
-    [self addSubview:[self overViewTableView]];
+    [self.view addSubview:[self overViewTableView]];
 }
 
 -(void)updateConstraints;
 {
     [[self overViewTableView] mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.mas_top);
+        make.top.equalTo(self.view.mas_top);
         make.height.equalTo(@([self.layoutManager height:75]));
-        make.left.equalTo(self);
-        make.right.equalTo(self);
+        make.left.equalTo(self.view);
+        make.right.equalTo(self.view);
     }];
-    
-    [super updateConstraints];
 }
 
 #pragma mark - Table view data source
@@ -101,6 +99,7 @@
             break;
         case 4:
             cell = [tableView dequeueReusableCellWithIdentifier:@"weatherInfoCellIdentifier"];
+            
             [self updateCellData:(WeatherInfoComponent*)cell andWithData:self.weatherModel];
             break;
         case 5:
@@ -181,14 +180,14 @@
     return _overViewTableView;
 }
 
-- (void)updateWeatherViewWithData:(SOLWeatherData *)data;
-{
-    self.dateFormatter = [[NSDateFormatter alloc]init];
-    [self.dateFormatter setDateFormat:@"day"];
-
-    self.weatherModel = data;
-    [[self overViewTableView] reloadData];
-}
+//- (void)updateWeatherViewWithData:(SOLWeatherData *)data;
+//{
+//    self.dateFormatter = [[NSDateFormatter alloc] init];
+//    [self.dateFormatter setDateFormat:@"day"];
+//
+//    self.weatherModel = data;
+////    [[self overViewTableView] reloadData];
+//}
 
 - (void)updateCellData:(WeatherInfoComponent *)cell andWithData:(SOLWeatherData *)data;
 {

@@ -33,13 +33,12 @@
     [[FOWeatherAPIRequest sharedInstance] getWeatherInfo:params withCompletion:^(NSError *error, id results) {
         if (!error) {
             SOLWeatherData *weatherData = [self dataFromJSON:results];
-//            if(placemark) {
-//                weatherData.placemark = placemark;
                 completionBlock(nil, weatherData);
-//            }
         }
-        
-        completionBlock(error, nil);
+        else
+        {
+            completionBlock(error, nil);
+        }
     }];
 }
 
@@ -54,7 +53,7 @@
     NSArray *forecastday2                       = [forecastday      objectAtIndex:2];
     NSArray *forecastday3                       = [forecastday      objectAtIndex:3];
     
-    SOLWeatherData *data = [[SOLWeatherData alloc]init];
+    SOLWeatherData *data = [[SOLWeatherData alloc] init];
     
     SOLWeatherSnapshot *forecastOne             = [[SOLWeatherSnapshot alloc] init];
     CGFloat forecastOneHighTemperatureF             = [[[forecastday0 valueForKey:@"high"]  valueForKey:@"fahrenheit"] doubleValue];

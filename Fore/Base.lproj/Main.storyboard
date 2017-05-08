@@ -382,9 +382,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="269.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="FcH-FH-Jy2" kind="show" id="fcp-b6-f2g"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
