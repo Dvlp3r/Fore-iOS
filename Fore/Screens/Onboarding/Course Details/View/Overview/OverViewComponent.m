@@ -104,6 +104,7 @@
             break;
         case 5:
             cell = [tableView dequeueReusableCellWithIdentifier:@"overviewVideoCellIdentifier"];
+            [(OverviewVideoComponent *)cell setDelegate:self];
 //            [(OverviewVideoComponent*)cell setDummyName:@"Video Component"];
             break;
         case 6:
@@ -220,6 +221,28 @@
     [(WeatherInfoComponent*)cell setSecondWeatherSpeed:[NSString stringWithFormat:@"%.0f mph",forecastDayTwoSnapshot.averageWindSpeed]];
     [(WeatherInfoComponent*)cell setThirdWeatherSpeed:[NSString stringWithFormat:@"%.0f mph",forecastDayThreeSnapshot.averageWindSpeed]];
     [(WeatherInfoComponent*)cell setFourthWeatherSpeed:[NSString stringWithFormat:@"%.0f mph",forecastDayFourSnapshot.averageWindSpeed]];
+}
+
+- (void)playerWillEnterFullscreen;
+{
+    [[self navigationController] setNavigationBarHidden:YES];
+    [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationFade];
+}
+
+- (void)playerWillLeaveFullscreen;
+{
+    [[self navigationController] setNavigationBarHidden:NO];
+    [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationFade];
+}
+
+- (void)playerDidEndPlaying;
+{
+    
+}
+
+- (void)playerFailedToPlayToEnd;
+{
+    
 }
 
 @end

@@ -20,6 +20,14 @@
 -(void)viewDidLoad;
 {
     [super viewDidLoad];
+    
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage new]
+                                                  forBarMetrics:UIBarMetricsDefault];
+    self.navigationController.navigationBar.shadowImage = [UIImage new];
+    self.navigationController.navigationBar.translucent = YES;
+    self.navigationController.view.backgroundColor = [UIColor clearColor];
+    self.navigationController.navigationBar.backgroundColor = [UIColor clearColor];
+    
     self.layoutManager = [[LayoutManager alloc] init];
     self.view.backgroundColor = [UIColor whiteColor];
     [self addSubviews];
@@ -28,17 +36,17 @@
 
 -(void)addSubviews;
 {
-//    [self.view addSubview:[self headerVideoView]];
+    [self.view addSubview:[self headerVideoView]];
 }
 
 -(void)updateConstraints;
 {
-//    [[self headerVideoView] mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.top.equalTo(self.view.mas_top);
-//        make.height.equalTo(@(150));
-//        make.left.equalTo(self.view);
-//        make.right.equalTo(self.view);
-//    }];
+    [[self headerVideoView] mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.view.mas_top);
+        make.height.equalTo(@(150));
+        make.left.equalTo(self.view);
+        make.right.equalTo(self.view);
+    }];
 }
 
 #pragma mark - Lazy Loading

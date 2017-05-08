@@ -8,8 +8,25 @@
 
 #import <UIKit/UIKit.h>
 #import "SOLWeatherData.h"
+#import "OverviewVideoComponent.h"
 
-@interface OverViewComponent : UIViewController<UITableViewDataSource,UITableViewDelegate>
+@protocol OverViewComponentDataSource <NSObject>
+
+@end
+
+@protocol OverViewComponentDelegate <NSObject>
+
+- (void)playerWillEnterFullscreen;
+- (void)playerWillLeaveFullscreen;
+- (void)playerDidEndPlaying;
+- (void)playerFailedToPlayToEnd;
+
+@end
+
+@interface OverViewComponent : UIViewController<UITableViewDataSource,UITableViewDelegate,OverviewVideoComponentDelegate>
+
+@property (nonatomic, assign) id<OverViewComponentDataSource> dataSource;
+@property (nonatomic, assign) id<OverViewComponentDelegate> delegate;
 
 @property (nonatomic, strong) SOLWeatherData *weatherModel;
 

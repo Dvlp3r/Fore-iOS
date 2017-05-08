@@ -12,6 +12,9 @@
 @interface OverviewVideoComponent ()<GUIPlayerViewDelegate>
 
 @property (strong, nonatomic) GUIPlayerView *videoPlayerView;
+@property (strong, nonatomic) UIView *playerView;
+@property (strong, nonatomic) UIImageView *playerIcon;
+
 @property (nonatomic, assign) BOOL isPlaying;
 @property (nonatomic, assign) BOOL userRequestedPause;
 
@@ -47,7 +50,8 @@
 
 -(void)addViews;
 {
-    [self addSubview:[self videoPlayerView]];
+    [self addSubview:[self playerView]];
+    [self.playerView addSubview:[self playerIcon]];
 }
 
 -(void)didTap;
@@ -66,11 +70,16 @@
     
     CGFloat screenWidth = [[self contentView] frame].size.width;
     CGFloat screenHeight = [[self contentView] frame].size.height;
-    
-    [[self videoPlayerView] setFrame:CGRectMake((screenWidth * 4)/100,
-                                                 0,
-                                                 (screenWidth * 92)/100,
-                                                 (screenHeight * 100)/100)];
+
+    [[self playerView] setFrame:CGRectMake((screenWidth * 4)/100,
+                                                0,
+                                                (screenWidth * 92)/100,
+                                                (screenHeight * 100)/100)];
+
+    [[self playerIcon] setFrame:CGRectMake(CGRectGetMidX(self.contentView.frame)-(screenWidth * 11.5)/100,
+                                           CGRectGetMidY(self.contentView.frame)-(screenHeight * 17)/100,
+                                           (screenWidth * 15)/100,
+                                           (screenHeight * 30)/100)];
 }
 
 -(void)setVideoURL:(NSURL *)videoURL
@@ -107,19 +116,48 @@
     return _videoPlayerView;
 }
 
+-(UIView *)playerView;
+{
+    if (_playerView) {
+        return _playerView;
+    }
+    
+    _playerView = [UIView new];
+    [_playerView setBackgroundColor:[UIColor blackColor]];
+//    [self addSubview:_playerView];
+//    [self bringSubviewToFront:_playerView];
+    
+    return _playerView;
+}
+
+-(UIImageView *)playerIcon;
+{
+    if (_playerIcon) {
+        return _playerIcon;
+    }
+    
+    _playerIcon = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Circled Play Filled-50"]];
+    _playerIcon.userInteractionEnabled = YES;
+//    _playerIcon.layer.borderColor = [UIColor redColor].CGColor;
+//    _playerIcon.layer.borderWidth = 1;
+    return _playerIcon;
+}
 #pragma mark - GUI Player View Delegate Methods
 
 - (void)playerWillEnterFullscreen {
+    [[self delegate] playerWillEnterFullscreen];
 //    [[self navigationController] setNavigationBarHidden:YES];
 //    [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationFade];
 }
 
 - (void)playerWillLeaveFullscreen {
+    [[self delegate] playerWillLeaveFullscreen];
 //    [[self navigationController] setNavigationBarHidden:NO];
 //    [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationFade];
 }
 
 - (void)playerDidEndPlaying {
+    
     [self.videoPlayerView clean];
 }
 

@@ -180,14 +180,10 @@
     [segmentController.navigationController.navigationBar setBackgroundImage:[UIImage new]
                                                   forBarMetrics:UIBarMetricsDefault];
     segmentController.navigationController.navigationBar.shadowImage = [UIImage new];
-    segmentController.navigationController.navigationBar.translucent = YES;
+    segmentController.navigationController.navigationBar.translucent = NO;
     segmentController.navigationController.view.backgroundColor = [UIColor clearColor];
     segmentController.navigationController.navigationBar.backgroundColor = [UIColor clearColor];
 
-    UIView *rightBarButtonItems = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 76, 32)];
-    [rightBarButtonItems addSubview:self.starButton];
-    
-    segmentController.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:rightBarButtonItems];
     
     UIButton *backButton = [[UIButton alloc] initWithFrame: CGRectMake(0, 0, 20, 21)];
     UIImage *backImage = [UIImage imageNamed:@"Back_50"];
@@ -198,6 +194,21 @@
     
     segmentController.navigationItem.leftBarButtonItems = [NSArray arrayWithObjects:backButtonItem,nil];
     
+    UIButton *shareButton =  [UIButton buttonWithType:UIButtonTypeCustom];
+    [shareButton setImage:[UIImage imageNamed:@"Upload-50-gray"] forState:UIControlStateNormal];
+    //[shareButton addTarget:self action:@selector(home) forControlEvents:UIControlEventTouchUpInside];
+    [shareButton setFrame:CGRectMake(0, 0, 32, 32)];
+    
+    UIButton *saveButton =  [UIButton buttonWithType:UIButtonTypeCustom];
+    [saveButton setImage:[UIImage imageNamed:@"saved"] forState:UIControlStateNormal];
+    //[saveButton addTarget:self action:@selector(settings) forControlEvents:UIControlEventTouchUpInside];
+    [saveButton setFrame:CGRectMake(44, 0, 32, 32)];
+    
+    UIView *rightBarButtonItems = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 76, 32)];
+    [rightBarButtonItems addSubview:shareButton];
+    [rightBarButtonItems addSubview:saveButton];
+    
+    segmentController.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:rightBarButtonItems];
     segmentController.headerViewHeight = 150;
     [[self navigationController] pushViewController:segmentController animated:YES];
 }
