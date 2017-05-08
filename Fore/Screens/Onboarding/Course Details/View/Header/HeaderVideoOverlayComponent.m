@@ -43,7 +43,7 @@
 {
     [[self headerVideoView] mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.view.mas_top);
-        make.height.equalTo(@(150));
+        make.height.equalTo(@([[self layoutManager] height:26.4]));
         make.left.equalTo(self.view);
         make.right.equalTo(self.view);
     }];

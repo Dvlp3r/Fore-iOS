@@ -176,6 +176,11 @@
     NSArray *viewcontrollers = [NSArray arrayWithObjects:overViewController,holeByHoleComponentViewController,reviewsComponentController, nil];
     
     SJSegmentedViewController *segmentController = [[SJSegmentedViewController alloc] initWithHeaderViewController:headerVideoOverlayComponent segmentControllers:viewcontrollers];
+//    segmentController.segmentBackgroundColor = [UIColor whiteColor];
+//    segmentController.selectedSegmentViewColor = [UIColor greenColor];
+//    segmentController.selectedSegmentViewHeight = 35.0;
+//
+//    segmentController.segmentTitleColor = UIColor.whiteColor;
     
     [segmentController.navigationController.navigationBar setBackgroundImage:[UIImage new]
                                                   forBarMetrics:UIBarMetricsDefault];
@@ -209,7 +214,7 @@
     [rightBarButtonItems addSubview:saveButton];
     
     segmentController.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:rightBarButtonItems];
-    segmentController.headerViewHeight = 150;
+    segmentController.headerViewHeight = [[self layoutManager] height:26.4];
     [[self navigationController] pushViewController:segmentController animated:YES];
 }
 

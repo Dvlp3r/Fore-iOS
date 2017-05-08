@@ -145,7 +145,7 @@
             rowHeight = [[self layoutManager] height:25];
             break;
         case 5:
-            rowHeight = 160;
+            rowHeight = [[self layoutManager] height:26.4];
             break;
         case 6:
             rowHeight = 80;
