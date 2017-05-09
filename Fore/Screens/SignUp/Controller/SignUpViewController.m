@@ -30,15 +30,6 @@
     self.layoutManager = [[LayoutManager alloc] init];
     self.signUpDelegate = [SignUpDelegate sharedInstance];
 
-    /*
-     @property (nonatomic) CGFloat idlePlaceHolderFontSize;
-     @property (nonatomic) CGFloat floatPlaceHolderFontSize;
-     @property (nonatomic, copy) NSString * _Nonnull inputFontName;
-     @property (nonatomic) CGFloat inputFontSize;
-     
-     //    _nameTextField.textField.font = [UIFont systemFontOfSize:10];
-     //    _nameTextField.textField.font = [UIFont systemFontOfSize:10];
-     */
     _nameTextField.textField.keyboardType = UIKeyboardTypeDefault;
     _nameTextField.inputFontSize = 10;
     _nameTextField.idlePlaceHolderFontSize = 13;
@@ -65,16 +56,24 @@
     _signUpButton.layer.masksToBounds = YES;
     if (IS_IPHONE_6P) {
         _signUpButton.layer.cornerRadius = 22;
+        [_connectWithFaceBookButton.titleLabel setFont:[UIFont systemFontOfSize:14]];
+        [_loginButton.titleLabel setFont:[UIFont systemFontOfSize:17]];
     }
     else if (IS_IPHONE_6)
     {
+        [_connectWithFaceBookButton.titleLabel setFont:[UIFont systemFontOfSize:12]];
+        [_loginButton.titleLabel setFont:[UIFont systemFontOfSize:15]];
         _signUpButton.layer.cornerRadius = 22;
     }
     else if (IS_IPHONE_5){
+        [_connectWithFaceBookButton.titleLabel setFont:[UIFont systemFontOfSize:10]];
+        [_loginButton.titleLabel setFont:[UIFont systemFontOfSize:13]];
         _signUpButton.layer.cornerRadius = 18;
     }
     else if (IS_IPHONE_4_OR_LESS){
         _signUpButton.layer.cornerRadius = 14;
+        [_connectWithFaceBookButton.titleLabel setFont:[UIFont systemFontOfSize:8]];
+        [_loginButton.titleLabel setFont:[UIFont systemFontOfSize:11]];
     }
     
     [self addConstraints];

@@ -56,18 +56,25 @@
     _loginButton.layer.masksToBounds = YES;
     if (IS_IPHONE_6P) {
         _loginButton.layer.cornerRadius = 22;
+        [_continueWithFacebookButton.titleLabel setFont:[UIFont systemFontOfSize:14]];
+        [_loginButton.titleLabel setFont:[UIFont systemFontOfSize:17]];
     }
     else if (IS_IPHONE_6)
     {
         _loginButton.layer.cornerRadius = 22;
+        [_continueWithFacebookButton.titleLabel setFont:[UIFont systemFontOfSize:12]];
+        [_loginButton.titleLabel setFont:[UIFont systemFontOfSize:15]];
     }
     else if (IS_IPHONE_5){
         _loginButton.layer.cornerRadius = 18;
+        [_continueWithFacebookButton.titleLabel setFont:[UIFont systemFontOfSize:10]];
+        [_loginButton.titleLabel setFont:[UIFont systemFontOfSize:13]];
     }
     else if (IS_IPHONE_4_OR_LESS){
         _loginButton.layer.cornerRadius = 14;
+        [_continueWithFacebookButton.titleLabel setFont:[UIFont systemFontOfSize:8]];
+        [_loginButton.titleLabel setFont:[UIFont systemFontOfSize:11]];
     }
-    
     [self addConstraints];
 }
 
@@ -144,15 +151,15 @@
 
 }
 
--(BOOL)textFieldShouldReturn:(UITextField *)textField;
-{
-//    textField.resignFirstResponder;
-    return YES;
-}
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField;
+{
+    [textField resignFirstResponder];
+    return YES;
 }
 
 /*
